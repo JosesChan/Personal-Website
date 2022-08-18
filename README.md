@@ -1,2 +1,6 @@
 # Personal Website
-Currently still in development. Website developed using tailwind and react. Open visual studio code and enter "npm start" in the terminal.
+Currently still in development. 
+Website developed using tailwind and react. 
+1. Install nodejs
+2. Open project in visual studio code 
+3. Enter "npm start" in the terminal.
