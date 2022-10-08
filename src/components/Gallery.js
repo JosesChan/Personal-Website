@@ -10,7 +10,7 @@ function Gallery(props){
 
     const [images,setImages] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    const [term, setTerm] = useState('');
 };  
             
 export default Gallery;
