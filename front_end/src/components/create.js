@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
  
+// export details of record to other file
 export default function Create() {
  const [form, setForm] = useState({
    name: "",
@@ -9,7 +10,8 @@ export default function Create() {
  });
  const navigate = useNavigate();
  
- // These methods will update the state properties.
+ // These methods will update the state properties using spread notation.
+ // ...var lets you reference multiple variables when you aren't sure of the amount being passed
  function updateForm(value) {
    return setForm((prev) => {
      return { ...prev, ...value };

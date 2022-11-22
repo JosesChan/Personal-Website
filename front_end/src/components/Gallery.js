@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from "react";
+
+
 import ContainerText from './ContainerText';
 import TextButton from './TextButton';
 import PictureStandalone from './PictureStandalone';
