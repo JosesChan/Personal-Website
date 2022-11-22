@@ -33,14 +33,6 @@ const NavMenu = () => {
           </button>
         </div>
 
-        {/* Large Screen Buttons Items */}
-        <div className="hidden md:block md:order-2">
-          <button type="button" className="text-white bg-blue-700 hover:bg-blue-800 
-          focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
-          mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            Press
-          </button>
-        </div>
 
         {/* Navbar Items */}
         <div className={`lg:flex justify-between items-center w-full md:w-auto md:block md:order-1 md:pb-0 ${navbar ? "block" : "hidden"}`}>
