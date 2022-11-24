@@ -17,7 +17,7 @@ const Home = () => {
       <ContainerText inputHead="Why does this website exist?"
         inputText="I made this website to both showcase my work and learn web-dev languages such as HTML, CSS and Javascript. 
           At the moment it uses React.js and Tailwind CSS to create a mobile-friendly website." />
-
+      
       <Gallery  />
     </div>
   );
