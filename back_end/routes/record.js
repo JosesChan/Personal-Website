@@ -1,4 +1,5 @@
 const express = require("express");
+const { HostAddress } = require("mongodb");
  
 // recordRoutes is an instance of the express router.
 // We use it to define our routes.
@@ -11,10 +12,10 @@ const dbo = require("../db/conn");
 // This help convert the id from string to ObjectId for the _id.
 const ObjectId = require("mongodb").ObjectId;
  
- 
+// GET ALL
 // This section will help you get a list of all the records.
 recordRoutes.route("/record").get(function (req, res) {
- let db_connect = dbo.getDb("employees");
+ let db_connect = dbo.getDb("Cluster-Personel-Website");
  db_connect
    .collection("records")
    .find({})
@@ -24,6 +25,7 @@ recordRoutes.route("/record").get(function (req, res) {
    });
 });
  
+// GET SINGLE
 // This section will help you get a single record by id
 recordRoutes.route("/record/:id").get(function (req, res) {
  let db_connect = dbo.getDb();
@@ -69,6 +71,26 @@ recordRoutes.route("/update/:id").post(function (req, response) {
      response.json(res);
    });
 });
+
+/*
+// Create operation on mongoDB grocery record table
+recordRoutes.route("/record/create").post(function (req, response) {
+  let db_connect = dbo.getDb();
+  let myobj = {
+    product_name: req.body.product_name,
+    store_name: req.body.store_name,
+    location: req.body.location,
+    price: req.body.price,
+    quantity: req.body.quantity,
+    address: req.body.address,
+  };
+  db_connect.collection("records").insertOne(myobj, function (err, res) {
+    if (err) throw err;
+    response.json(res);
+  });
+ });
+*/
+
  
 // This section will help you delete a record
 recordRoutes.route("/:id").delete((req, response) => {

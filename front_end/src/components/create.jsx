@@ -41,7 +41,7 @@ export default function Create() {
       });
 
     setForm({ name: "", position: "", level: "" });
-    navigate("/Records");
+    navigate("/Records/Read");
   }
 
   // This following section will display the form that takes the input from the user.
@@ -63,7 +63,6 @@ export default function Create() {
                 checked_if={form.level === "Intern"}
                 statehook={(e) => { updateForm({ level: e.target.value }) }}
               />
-
 
               <Radio
                 element_id="positionIntern"

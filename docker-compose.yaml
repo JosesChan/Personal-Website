@@ -1,0 +1,27 @@
+version: "2"
+services:
+  front_end:
+    image: webapp-front_end
+    restart: always
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./front_end:/front_end
+      - /front_end/node_modules
+    links:
+      - back_end
+    networks: 
+      - webappnetwork
+
+  back_end:
+    image: webapp-back_end
+    restart: always
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./back_end:/back_end
+      - /back_end/node_modules
+    depends_on:
+      - mongodb
+    networks: 
+      - webappnetwork
