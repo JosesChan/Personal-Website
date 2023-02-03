@@ -1,27 +1,78 @@
-version: "2"
+# Version of Docker-compose
+version: '3.8'
 services:
-  front_end:
-    image: webapp-front_end
-    restart: always
-    ports:
-      - "3000:3000"
-    volumes:
-      - ./front_end:/front_end
-      - /front_end/node_modules
-    links:
-      - back_end
-    networks: 
-      - webappnetwork
 
-  back_end:
-    image: webapp-back_end
-    restart: always
-    ports:
-      - "9000:9000"
+  # Add the react service
+  react:
+    build: 
+      # Location to the dockerfile
+      context: ./front_end/
+      # Name of the dockerfile
+      dockerfile: Dockerfile
     volumes:
-      - ./back_end:/back_end
-      - /back_end/node_modules
+        # Bind-mounts configuration
+      - ./front_end:/front_end
+        # Ignoring any changes made in "node_modules" folder
+      - /front_end/node_modules
+    ports:
+        # External port:Internal port
+      - 3000:3000
+    environment:
+      # Enabling hot reload
+      - CHOKIDAR_USEPOLLING=true
     depends_on:
-      - mongodb
-    networks: 
-      - webappnetwork
+        # Starts up the node service before starting up the react service
+      - node
+
+  # Add node service
+  node:
+    # Creating a custom image
+    build:
+      # Location to the Dockerfile
+      context: ./back_end
+      # Name of the Dockerfile
+      dockerfile: Dockerfile
+    ports:
+        # External port:Internal port
+      - 5000:5000
+    # ADD THE CONFIGURATION FROM THIS POINT to create a volume named nodeVolume
+    volumes:
+      # Syntax <nameOfVolume>:<directorInDocker>
+      - nodeVolume:/server
+      # ADD THE CONFIGURATION FROM THIS POINT to sync the working directory
+      # for the application to the /app directory in the container
+      - .:/server
+      - /server/node_modules
+
+    # ADD THE CONFIGURATION FROM THIS POINT to build the MongoDB service
+    environment:
+      - PORT=5000
+      # For security, specify a username and password as environmental variables
+      # Username for the mongo database
+      - MONGO_INITDB_ROOT_USERNAME=mern
+      # Password for the mongo database
+      - MONGO_INITDB_ROOT_PASSWORD=merndocker
+    # Enables the mongo service to start before the node service
+    depends_on:
+      - mongo
+
+
+  # Add mongoDB service
+  mongo:
+    # Official mongo image from docker.hub
+    image: mongo
+    environment:
+      # Username for the mongo database
+      - MONGO_INITDB_ROOT_USERNAME=mern
+      # Password for the mongo database
+      - MONGO_INITDB_ROOT_PASSWORD=merndocker
+    volumes:
+      # <nameOfVolume>:<directorInDocker>
+      - mongoDB:/data/db
+
+ 
+# Making the volumes accessible by other containers/services
+volumes:
+  # Declaring the node service volume.
+  nodeVolume:
+  mongoDB:
