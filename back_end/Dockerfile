@@ -5,7 +5,7 @@
 FROM node:17
 
 # Set the working directory to /back_end
-WORKDIR /back_end
+WORKDIR /back_end/
 
 # copy package.json into the container at /back_end
 COPY package.json /back_end/

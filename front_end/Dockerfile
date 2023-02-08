@@ -10,11 +10,14 @@ ENV NODE_OPTIONS --openssl-legacy-provider
 COPY package.json /front_end/
 
 # install dependencies
-RUN npm install
+RUN npm install -g @craco/craco
 
 # Copies the entire react source code into "/front_end"
 COPY . /front_end/
 
 EXPOSE 3000
+
 # Starting the react app
-CMD ["start"]
+CMD ["npm", "start"]
+
+
