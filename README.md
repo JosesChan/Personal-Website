@@ -11,7 +11,7 @@ PORT=5000"
 
 Replace ATLAS_URI input with your connection string. Add "/?retryWrites=true&w=majority" to the end after ".net"
 
-Dockerle instructions
+Dockerless instructions
 1. Install nodejs
 2. Open project in visual studio code 
 3. Enter "npm start" in the terminal.
