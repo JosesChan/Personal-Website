@@ -18,8 +18,9 @@ services:
         # External port:Internal port
       - 3000:3000
     environment:
-      # Enabling hot reload
+      # Enabling hot reload, CHOKIDAR_USEPOLLING Deprecated
       - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true
     depends_on:
         # Starts up the node service before starting up the react service
       - node
