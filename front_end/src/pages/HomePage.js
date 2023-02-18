@@ -7,8 +7,7 @@ import Gallery from '../components/Gallery';
 const Home = () => {
 
   return (
-    <div className="space-y-6 items-center">
-
+    <div>
       <PictureStandalone location={selfPicture} altTag="JosesChan2021" />
 
       <ContainerText inputHead="Hello I'm Joses!"

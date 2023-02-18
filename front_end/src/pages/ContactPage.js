@@ -3,10 +3,9 @@ import ContainerText from '../components/ContainerText';
 
 const ContactPage = () => {
     return (
-        <div className="mx-auto max-w-sm space-y-4 mt-36 items-center">
-            
-            Contact
-        </div>
+        <ContainerText inputHead="Contact me"
+            inputText="You can find me on any of these websites!" />
+
     );
 };
 
