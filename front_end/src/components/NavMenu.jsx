@@ -41,13 +41,24 @@ const NavMenu = () => {
         {/* Navbar Items */}
         <div className={`lg:flex justify-between items-center w-full md:w-auto md:block md:order-1 md:pb-0 ${navbar ? "block" : "hidden"}`}>
           <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <CustomLink to="/" aria-current="page" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:p-0"}>Home</CustomLink>
-              <CustomLink to="/Contact" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>Contact</CustomLink>
-              <CustomLink to="/Records" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>Record List</CustomLink>
-              <CustomLink to="/Create" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>Create Record</CustomLink>
+              <CustomLink to="/" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100') + "block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>
+                Home
+              </CustomLink>
+              
+              <CustomLink to="/Contact" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white  dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>
+                Contact
+              </CustomLink>
+              
+              <CustomLink to="/Records" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>
+                Record List
+              </CustomLink>
+              
+              <CustomLink to="/Create" className={({isActive}) => (isActive?'text-blue-700 md:hover:text-blue-700' : 'text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100')+"block py-2 px-3 rounded md:hover:bg-transparent md:dark:hover:text-white dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"}>
+                Create Record
+              </CustomLink>
           </ul>
         </div>
-
+        
       </div>
     </nav>
   );

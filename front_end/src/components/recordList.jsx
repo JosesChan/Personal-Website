@@ -78,7 +78,7 @@ export default function RecordList() {
   return (
     <div>
       <ContainerText inputHead="Record List"
-        inputText={
+        inputBody={
           <table className="table-auto">
             <thead className="border-b">
               <tr>

@@ -1,5 +1,4 @@
 import NavMenu from './components/NavMenu';
-import ComponentPrototyping from './components/ComponentPrototyping';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/HomePage';
 import AboutContent from './pages/AboutPage';

@@ -48,7 +48,7 @@ export default function Create() {
   return (
     <div className="space-y-6 items-center">
       <ContainerText inputHead="Create New Record"
-        inputText={
+        inputBody={
           <form onSubmit={onSubmit}>
             <div className="mt-4">
               <TextField type="text" element_id="name" element_text="Name" placeholder="Joe" value_input={form.name} statehook={(e) => { updateForm({ name: e.target.value }) }} />
