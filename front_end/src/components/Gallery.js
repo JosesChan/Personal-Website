@@ -9,7 +9,7 @@ import selfPicture from '../imgs/SelfImage.jpg';
 
 function Gallery(props){
 
-    const projects = props.inputArray;
+    const projects = props.inputPictureArray;
 
     const [images,setImages] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
