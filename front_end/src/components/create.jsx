@@ -7,9 +7,9 @@ import Radio from './Radio';
 // export details of record to other file
 export default function Create() {
   const [form, setForm] = useState({
-    name: "",
-    position: "",
-    level: "",
+    task: "",
+    difficulty: "", 
+    length: "",
   });
   const navigate = useNavigate();
 
@@ -40,8 +40,8 @@ export default function Create() {
         return;
       });
 
-    setForm({ name: "", position: "", level: "" });
-    navigate("/Records/Read");
+    setForm({ task: "", difficulty: "", length: "" });
+    navigate("/Records");
   }
 
   // This following section will display the form that takes the input from the user.
@@ -51,35 +51,35 @@ export default function Create() {
         inputBody={
           <form onSubmit={onSubmit}>
             <div className="mt-4">
-              <TextField type="text" element_id="name" element_text="Name" placeholder="Joe" value_input={form.name} statehook={(e) => { updateForm({ name: e.target.value }) }} />
-              <TextField type="text" element_id="position" element_text="Position" placeholder="Manager" value_input={form.position} statehook={(e) => { updateForm({ position: e.target.value }) }} />
+              <TextField type="text" element_id="task" element_text="Task" placeholder="Build a snowman!" value_input={form.task} statehook={(e) => { updateForm({ task: e.target.value }) }} />
+              <TextField type="text" element_id="difficulty" element_text="Difficulty" placeholder="Easy" value_input={form.difficulty} statehook={(e) => { updateForm({ difficulty: e.target.value }) }} />
             </div>
             <div className="my-6">
               <Radio
-                element_id="positionIntern"
+                element_id="duration"
                 type="radio"
-                value_input="Intern"
-                element_name="positionOptions"
-                checked_if={form.level === "Intern"}
-                statehook={(e) => { updateForm({ level: e.target.value }) }}
+                value_input="Short"
+                element_name="durationLength"
+                checked_if={form.length === "Short"}
+                statehook={(e) => { updateForm({ length: e.target.value }) }}
               />
 
               <Radio
-                element_id="positionIntern"
+                element_id="duration"
                 type="radio"
-                value_input="Junior"
-                element_name="positionOptions"
-                checked_if={form.level === "Junior"}
-                statehook={(e) => { updateForm({ level: e.target.value }) }}
+                value_input="Medium"
+                element_name="durationLength"
+                checked_if={form.length === "Medium"}
+                statehook={(e) => { updateForm({ length: e.target.value }) }}
               />
 
               <Radio
-                element_id="positionIntern"
+                element_id="duration"
                 type="radio"
-                value_input="Senior"
-                element_name="positionOptions"
-                checked_if={form.level === "Senior"}
-                statehook={(e) => { updateForm({ level: e.target.value }) }}
+                value_input="Long"
+                element_name="durationLength"
+                checked_if={form.length === "Long"}
+                statehook={(e) => { updateForm({ length: e.target.value }) }}
               />
               <TextButton type="submit" prompt="Create user" />
               </div>

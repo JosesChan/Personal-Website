@@ -29,10 +29,10 @@ recordRoutes.route("/record").get(function (req, res) {
 // This section will help you get a single record by id
 recordRoutes.route("/record/:id").get(function (req, res) {
  let db_connect = dbo.getDb();
- let myquery = { _id: ObjectId(req.params.id) };
+ let myQuery = { _id: ObjectId(req.params.id) };
  db_connect
    .collection("records")
-   .findOne(myquery, function (err, result) {
+   .findOne(myQuery, function (err, result) {
      if (err) throw err;
      res.json(result);
    });
@@ -42,9 +42,9 @@ recordRoutes.route("/record/:id").get(function (req, res) {
 recordRoutes.route("/record/add").post(function (req, response) {
  let db_connect = dbo.getDb();
  let myobj = {
-   name: req.body.name,
-   position: req.body.position,
-   level: req.body.level,
+  task: req.body.task,
+  difficulty: req.body.difficulty,
+  length: req.body.length,
  };
  db_connect.collection("records").insertOne(myobj, function (err, res) {
    if (err) throw err;
@@ -55,48 +55,28 @@ recordRoutes.route("/record/add").post(function (req, response) {
 // This section will help you update a record by id.
 recordRoutes.route("/update/:id").post(function (req, response) {
  let db_connect = dbo.getDb();
- let myquery = { _id: ObjectId(req.params.id) };
- let newvalues = {
+ let myQuery = { _id: ObjectId(req.params.id) };
+ let newValues = {
    $set: {
-     name: req.body.name,
-     position: req.body.position,
-     level: req.body.level,
+    task: req.body.task,
+    difficulty: req.body.difficulty,
+    length: req.body.length,
    },
  };
  db_connect
    .collection("records")
-   .updateOne(myquery, newvalues, function (err, res) {
+   .updateOne(myQuery, newValues, function (err, res) {
      if (err) throw err;
      console.log("1 document updated");
      response.json(res);
    });
 });
-
-/*
-// Create operation on mongoDB grocery record table
-recordRoutes.route("/record/create").post(function (req, response) {
-  let db_connect = dbo.getDb();
-  let myobj = {
-    product_name: req.body.product_name,
-    store_name: req.body.store_name,
-    location: req.body.location,
-    price: req.body.price,
-    quantity: req.body.quantity,
-    address: req.body.address,
-  };
-  db_connect.collection("records").insertOne(myobj, function (err, res) {
-    if (err) throw err;
-    response.json(res);
-  });
- });
-*/
-
  
 // This section will help you delete a record
 recordRoutes.route("/:id").delete((req, response) => {
  let db_connect = dbo.getDb();
- let myquery = { _id: ObjectId(req.params.id) };
- db_connect.collection("records").deleteOne(myquery, function (err, obj) {
+ let myQuery = { _id: ObjectId(req.params.id) };
+ db_connect.collection("records").deleteOne(myQuery, function (err, obj) {
    if (err) throw err;
    console.log("1 document deleted");
    response.json(obj);
