@@ -10,6 +10,8 @@ ENV NODE_OPTIONS --openssl-legacy-provider
 COPY package.json /front_end/
 
 # install dependencies
+RUN npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
+
 RUN npm install -g @craco/craco
 
 # Copies the entire react source code into "/front_end"
