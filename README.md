@@ -21,3 +21,6 @@ Docker instructions
 2. Navigate to the Personal Website folder
 3. docker-compose up --build
 
+Notes to self for later:
+Check possible implementation of lazy load
+Consider adding type checking to components

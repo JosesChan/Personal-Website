@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 const NavMenu = () => {
 
-  {/*State hook*/ }
+  /*State hook*/ 
   const [navbar, setNavbar] = React.useState(false);
 
   return (
@@ -41,25 +41,27 @@ const NavMenu = () => {
         {/* Navbar Items */}
         <div className={`lg:flex md:justify-between sm:justify-end items-center w-full md:w-auto md:block md:order-1 sm:order-3 md:pb-0 ${navbar ? "block" : "hidden"}`}>
           <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-              <CustomLink to="/" className={({isActive}) => 
+              
+              <CustomListLink to="/" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                Home
-              </CustomLink>
+              </CustomListLink>
               
-              <CustomLink to="/Contact" className={({isActive}) => 
+              <CustomListLink to="/Contact" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                 Contact
-              </CustomLink>
+              </CustomListLink>
               
-              <CustomLink to="/Records" className={({isActive}) => 
+              <CustomListLink to="/Records" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                 Record List
-              </CustomLink>
+              </CustomListLink>
               
-              <CustomLink to="/Create" className={({isActive}) => 
+              <CustomListLink to="/Create" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                 Create Record
-              </CustomLink>
+              </CustomListLink>
+              
           </ul>
         </div>
         
@@ -68,7 +70,8 @@ const NavMenu = () => {
   );
 };
 
-function CustomLink({to,children,...props}){
+{/*Hoisted to the top of the file to avoid linter error*/}
+function CustomListLink({to,children,...props}){
   return(
     <li>
     <NavLink to={to} {...props}>

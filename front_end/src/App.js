@@ -4,7 +4,7 @@ import Home from './pages/HomePage';
 import AboutContent from './pages/AboutPage';
 import ProjectsContent from './pages/ProjectPage';
 import ContactContent from './pages/ContactPage';
-import RecordList from './components/recordList';
+import RecordList from './components/RecordList';
 import Edit from "./components/edit";
 import Create from "./components/create";
 
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <NavMenu />
-      <div className='mx-auto max-w-sm space-y-4 mt-36 container items-center'>
+      <div className='mx-auto max-w-sm space-y-12 mt-36 mb-28 container items-center'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<AboutContent />} />
