@@ -3,7 +3,6 @@ import CardGeneral from '../components/CardGeneral';
 import ContainerText from '../components/ContainerText';
 import PictureStandalone from '../components/PictureStandalone';
 import selfPicture from '../imgs/IMG_02.jpg';
-import swordPicture from '../imgs/IMG_1955.JPG'
 import Gallery from '../components/ProjectGallery/Gallery';
 
 
@@ -20,18 +19,13 @@ const Home = () => {
         inputBody="I made this website to both showcase my work and learn web-dev languages such as HTML, CSS and Javascript. 
           At the moment it uses React.js and Tailwind CSS to create a mobile-friendly website." />
 
-      <ContainerText inputHead="A little more about me!"
-        inputBody="I love solving problems and I always try to learn new ideas and concepts to help bolster my abilities.
-          Alongside developing software, I enjoy naturally exploring different badminton techniques and tactics on the court, 
-          beating challenging videogames which require good resource management or predicting human decision making,
-          and learning HEMA (Historical European Martial Arts) through sparring and reading of historical manuscripts."
+      
+      <ContainerText inputHead="My projects!"
+        inputBody="I love developing and creating software. Below are some of the projects I've worked on since attending and finishing university."
       />
       
-      <PictureStandalone location={swordPicture} altTag="Two people sparring during a University of Lincoln HEMA demonstration" />
-
-      <CardGeneral>
-        <Gallery/>
-      </CardGeneral>
+      
+      <Gallery/>
       
     </Fragment>
   );

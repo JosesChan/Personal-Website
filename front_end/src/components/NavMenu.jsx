@@ -47,9 +47,9 @@ const NavMenu = () => {
                Home
               </CustomListLink>
               
-              <CustomListLink to="/Contact" className={({isActive}) => 
+              <CustomListLink to="/About" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
-                Contact
+                About
               </CustomListLink>
               
               <CustomListLink to="/Records" className={({isActive}) => 

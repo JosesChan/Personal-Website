@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router";
-import ContainerText from './ContainerText';
 import TextButton from './TextButton';
 import TextField from './TextField';
 import Radio from './Radio';
+import CardGeneral from './CardGeneral';
+
+
 // export details of record to other file
 export default function Create() {
   const [form, setForm] = useState({
@@ -46,45 +48,43 @@ export default function Create() {
 
   // This following section will display the form that takes the input from the user.
   return (
-    <div className="space-y-6 items-center">
-      <ContainerText inputHead="Create New Record"
-        inputBody={
-          <form onSubmit={onSubmit}>
-            <div className="mt-4">
-              <TextField type="text" element_id="task" element_text="Task" placeholder="Build a snowman!" value_input={form.task} statehook={(e) => { updateForm({ task: e.target.value }) }} />
-              <TextField type="text" element_id="difficulty" element_text="Difficulty" placeholder="Easy" value_input={form.difficulty} statehook={(e) => { updateForm({ difficulty: e.target.value }) }} />
+    <CardGeneral>
+      <h1 className="text-xl font-medium text-large">Create New Record</h1>
+        <form onSubmit={onSubmit}>
+          <div className="mt-4">
+            <TextField type="text" element_id="task" element_text="Task" placeholder="Build a snowman!" value_input={form.task} statehook={(e) => { updateForm({ task: e.target.value }) }} />
+            <TextField type="text" element_id="difficulty" element_text="Difficulty" placeholder="Easy" value_input={form.difficulty} statehook={(e) => { updateForm({ difficulty: e.target.value }) }} />
+          </div>
+          <div className="my-6">
+            <Radio
+              element_id="duration"
+              type="radio"
+              value_input="Short"
+              element_name="durationLength"
+              checked_if={form.length === "Short"}
+              statehook={(e) => { updateForm({ length: e.target.value }) }}
+            />
+
+            <Radio
+              element_id="duration"
+              type="radio"
+              value_input="Medium"
+              element_name="durationLength"
+              checked_if={form.length === "Medium"}
+              statehook={(e) => { updateForm({ length: e.target.value }) }}
+            />
+
+            <Radio
+              element_id="duration"
+              type="radio"
+              value_input="Long"
+              element_name="durationLength"
+              checked_if={form.length === "Long"}
+              statehook={(e) => { updateForm({ length: e.target.value }) }}
+            />
+            <TextButton type="submit" prompt="Create user" />
             </div>
-            <div className="my-6">
-              <Radio
-                element_id="duration"
-                type="radio"
-                value_input="Short"
-                element_name="durationLength"
-                checked_if={form.length === "Short"}
-                statehook={(e) => { updateForm({ length: e.target.value }) }}
-              />
-
-              <Radio
-                element_id="duration"
-                type="radio"
-                value_input="Medium"
-                element_name="durationLength"
-                checked_if={form.length === "Medium"}
-                statehook={(e) => { updateForm({ length: e.target.value }) }}
-              />
-
-              <Radio
-                element_id="duration"
-                type="radio"
-                value_input="Long"
-                element_name="durationLength"
-                checked_if={form.length === "Long"}
-                statehook={(e) => { updateForm({ length: e.target.value }) }}
-              />
-              <TextButton type="submit" prompt="Create user" />
-              </div>
           </form>
-        } />
-    </div>
+    </CardGeneral>
   );
 }
