@@ -1,5 +1,12 @@
 import selfPicture from '../../imgs/IMG_02.jpg';
 import lungsPicture from '../../imgs/IMG_03.jpg';
+import webscrapePicture from '../../imgs/IMG_04.jpg';
+import googleCloudPicture from '../../imgs/IMG_05.jpg';
+import umlPicture from '../../imgs/IMG_06.jpg';
+import correlationPicture from '../../imgs/IMG_07.jpg';
+import kClusterPicture from '../../imgs/IMG_08.jpg';
+import digitalMenuPicture from '../../imgs/IMG_09.jpg';
+import parallelProgrammingPicture from '../../imgs/IMGS_10.jpg';
 
 const galleryData =[
     {
@@ -13,7 +20,7 @@ const galleryData =[
     },
     {
         id:2,
-        image:selfPicture,
+        image:webscrapePicture,
         title:"Inventory Web Scraper",
         description:"A small project that checks when a product is in stock through reading HTML in Beautiful Soup 4 and available JSON objects. This project was made to notify and log which products are back in stock for a friend.",
         tags:["Python"],
@@ -22,7 +29,7 @@ const galleryData =[
     },
     {
         id:3,
-        image:selfPicture,
+        image:googleCloudPicture,
         title:"Google Cloud IAAS Provisioning",
         description:"Project made during my studies in university. This project developed my experience in interacting with cloud vendors and helped consolidate my cloud computing knowledge.",
         tags:["Jinja"],
@@ -31,7 +38,7 @@ const galleryData =[
     },
     {
         id:4,
-        image:selfPicture,
+        image:umlPicture,
         title:"MySQL Database Planning",
         description:"A small and simple project made during university. This project was to satisfy a university module where I was required to develop and normalise a schema for a parcel delivery service.",
         tags:["SQL"],
@@ -40,7 +47,7 @@ const galleryData =[
     },
     {
         id:5,
-        image:selfPicture,
+        image:correlationPicture,
         title:"Big Data: Multivariate Analysis Nuclear Reactors",
         description:"Another university project which tested my ability to analyse big data. This project led me to learn how to implement data pipelines and use algorithms to analyse.",
         tags:["Python"],
@@ -49,7 +56,7 @@ const galleryData =[
     },
     {
         id:6,
-        image:selfPicture,
+        image:kClusterPicture,
         title:"Machine Learning Algorithms",
         description:"This project helped solidify my skills in machine learning techniques. This allowed to demonstrate and use K-Clustering, K-fold cross validation, polynomial regression equation and data visualisation tools.",
         tags:["Python"],
@@ -58,7 +65,7 @@ const galleryData =[
     },
     {
         id:7,
-        image:selfPicture,
+        image:digitalMenuPicture,
         title:"Object Oriented Digital Menu",
         description:"Simple project for university that demonstrates OOP features and utilises automatic garbage collection through smart pointers. Despite already knowing OOP at the time, I thought it would be a good chance to not just practise my OOP abilities but also improve my general development skills like a focus on how user's will operate the solution and considerations for performance with automatic garbage collection.",
         tags:["C++"],
@@ -75,7 +82,7 @@ const galleryData =[
     },
     {
         id:9,
-        image:selfPicture,
+        image:parallelProgrammingPicture,
         title:"Parallel Processing Kernels",
         description:"This project tested my ability to understand Parallel Programming concepts and judgement to apply them appropriately to achieve efficiency.",
         tags:["C++"],
