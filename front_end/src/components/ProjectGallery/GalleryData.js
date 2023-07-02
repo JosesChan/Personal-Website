@@ -1,9 +1,10 @@
 import selfPicture from '../../imgs/IMG_02.jpg';
+import lungsPicture from '../../imgs/IMG_03.jpg';
 
 const galleryData =[
     {
         id:1,
-        image:selfPicture,
+        image:lungsPicture,
         title:"Covid-19 Convolutional Neural Network for Computed Tomography scans",
         description:"My dissertation project to detect Covid-19 positive patients using open source CT scan data. This project involved studying symptoms of Covid that can appear in CT scans such as ground glass opacities and the potential benefit and downsides of implementation",
         tags:["Python"],

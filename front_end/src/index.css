@@ -3,15 +3,23 @@
 @tailwind utilities;
 
 
-@layer components{
-    .navbar-header{
-        @apply py-2 px-3 block rounded md:hover:bg-transparent md:dark:hover:text-white dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700;
-      }
 
-    .navbar-inactive{
-        @apply text-gray-500 dark:text-gray-400 dark:hover:bg-gray-700 hover:bg-gray-100;
+@layer utilities {
+  .animation-fade-in {
+    opacity: 0;
+    animation: fade-in 0.35s ease-in forwards;
+  }
+  
+  @keyframes fade-in {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
     }
-    .navbar-active{
-        @apply text-blue-700 md:hover:text-blue-700;
+
+    0% {
+      transform: translateY(5%);
+      opacity: 0;
     }
+  }
+
 }

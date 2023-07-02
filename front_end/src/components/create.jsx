@@ -5,6 +5,7 @@ import TextField from './TextField';
 import Radio from './Radio';
 import CardGeneral from './CardGeneral';
 
+// consider using useReducer
 
 // export details of record to other file
 export default function Create() {

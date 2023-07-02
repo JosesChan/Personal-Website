@@ -11,13 +11,13 @@ const NavMenu = () => {
       <div className="container flex flex-wrap justify-between items-center mx-auto w-10/12">
 
         {/* Nav Image */}
-        <a href="javascript:void(0)" className="flex items-center sm:order-1">
+        <a href="javascript:void(0)" className="flex items-center md:order-1">
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Joses Chan</span>
         </a>
 
 
         {/* Mobile button */}
-        <div className="md:hidden sm:order-2">
+        <div className="md:hidden order-last">
           <button className="p-2 text-gray-200 rounded-md outline-none focus:border-gray-400 focus:border" onClick={() => setNavbar(!navbar)}>
             {navbar ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">

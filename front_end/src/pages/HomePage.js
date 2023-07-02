@@ -24,7 +24,6 @@ const Home = () => {
         inputBody="I love developing and creating software. Below are some of the projects I've worked on since attending and finishing university."
       />
       
-      
       <Gallery/>
       
     </Fragment>

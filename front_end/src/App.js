@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <NavMenu />
-      <div className='mx-auto max-w-sm space-y-12 mt-36 mb-28 container items-center'>
+      <div className='mx-auto md:max-w-md max-w-xs space-y-12 mt-36 mb-28 container items-center'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<AboutContent />} />
