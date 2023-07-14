@@ -6,7 +6,10 @@ import umlPicture from '../../imgs/IMG_06.jpg';
 import correlationPicture from '../../imgs/IMG_07.jpg';
 import kClusterPicture from '../../imgs/IMG_08.jpg';
 import digitalMenuPicture from '../../imgs/IMG_09.jpg';
-import parallelProgrammingPicture from '../../imgs/IMGS_10.jpg';
+import parallelProgrammingPicture from '../../imgs/IMG_10.jpg';
+import pathfindingPicture from '../../imgs/IMG_11.jpg';
+import robotPicture from '../../imgs/IMG_12.jpg';
+import searchSortAlgorithms from '../../imgs/IMG_13.jpg';
 
 const galleryData =[
     {
@@ -74,7 +77,7 @@ const galleryData =[
     },
     {
         id:8,
-        image:selfPicture,
+        image:robotPicture ,
         title:"Digital Robotics Project",
         description:"Digital prototype of a robot for university. Originally made for a module on work with a group of other computer scientist, this prototype was created using Coppeliasim during Covid-19 which prevented us from making a physical model.",
         tags:["Python", "Lua"],
@@ -90,7 +93,7 @@ const galleryData =[
     },
     {
         id:10,
-        image:selfPicture,
+        image:searchSortAlgorithms,
         title:"Search and Sort Algorithms",
         description:"Small project that looked at implementing search and sort algorithms. These include simple ones like bubble sort and introsort which is a hybrid sorting algorithm",
         tags:["C#"],
@@ -98,7 +101,7 @@ const galleryData =[
     },    
     {
         id:11,
-        image:selfPicture,
+        image:pathfindingPicture,
         title:"A* and Djikstra Pathfinding",
         description:"This was a fun project that helped me understand the beauty of Djikstra's algorithm and how different variations evolved.",
         tags:["C++"],
