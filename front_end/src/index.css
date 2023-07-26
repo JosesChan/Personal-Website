@@ -12,6 +12,10 @@
     @apply text-xl font-medium text-large;
   }
 
+  h3{
+    @apply text-base font-semibold text-large;
+  }
+
   p {
     @apply text-medium;
   }
@@ -40,6 +44,24 @@
       transform: translateY(5%);
       opacity: 0;
     }
+  }
+
+  .animation-fade-in-down{
+    opacity: 0;
+    animation: fade-in-down 0.35s ease-in forwards;
+  }
+
+  @keyframes fade-in-down {
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    0% {
+      transform: translateY(-20%);
+      opacity: 0;
+    }
+
   }
 
   .page-column {

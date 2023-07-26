@@ -3,7 +3,7 @@ import {NavLink} from 'react-router-dom';
 
 const NavMenu = () => {
 
-  /*State hook*/ 
+  // State hook 
   const [navbar, setNavbar] = React.useState(false);
 
   return (
@@ -12,12 +12,12 @@ const NavMenu = () => {
 
         {/* Nav Image */}
         <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" className="flex items-center md:order-1">
-          <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Joses Chan</span>
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Joses Chan</span>
         </a>
 
 
         {/* Mobile button */}
-        <div className="md:hidden order-last">
+        <div className="md:hidden sm:order-last">
           <button className="p-2 text-gray-200 rounded-md outline-none focus:border-gray-400 focus:border" onClick={() => setNavbar(!navbar)}>
             {navbar ? (
               <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" viewBox="0 0 20 20" fill="currentColor">
@@ -32,15 +32,10 @@ const NavMenu = () => {
             )}
           </button>
         </div>
-
-        {/* */}
-        <div className="md:order-3">
-
-        </div>
-
+        
         {/* Navbar Items */}
-        <div className={`lg:flex md:justify-between sm:justify-end items-center w-full md:w-auto md:block md:order-1 sm:order-3 md:pb-0 ${navbar ? "block" : "hidden"}`}>
-          <ul className="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <div className={`lg:flex md:justify-between sm:justify-end items-center w-full md:w-auto md:block md:order-1 sm:order-3 md:pb-0 ${navbar ? "block animation-fade-in-down" : "hidden"}`}>
+          <ul className="flex flex-col p-4 mt-4 md:space-y-0 space-y-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
               
               <CustomListLink to="/" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
@@ -70,7 +65,7 @@ const NavMenu = () => {
   );
 };
 
-{/*Hoisted to the top of the file to avoid linter error*/}
+// Hoisted to the top of the file to avoid linter error
 function CustomListLink({to,children,...props}){
   return(
     <li>

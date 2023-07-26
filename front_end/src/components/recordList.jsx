@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CardGeneral from '../components/CardGeneral';
+import { Fragment } from 'react';
+
 
 // Set layout for table
 const Record = (props) => (
@@ -17,6 +19,7 @@ const Record = (props) => (
     </td>
   </tr>
 );
+
 
 // Using a GET method, retrieve all records in the database
 export default function RecordList() {
@@ -76,8 +79,9 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
+    <Fragment>
+      <h1 className="invisible">Record Table</h1>
       <CardGeneral className="page-column">
-        <h1 className="invisible">Record Table</h1>
         <h2>To-Do list</h2>
           <table className="table-auto">
             <thead className="border-b">
@@ -91,5 +95,6 @@ export default function RecordList() {
             <tbody>{recordList()}</tbody>
           </table>
       </CardGeneral>
+    </Fragment>
   );
 }

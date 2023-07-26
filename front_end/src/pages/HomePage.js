@@ -8,10 +8,9 @@ import CardGeneral from '../components/CardGeneral';
 const Home = () => {
   return (
     <Fragment>
+      <h1 className="invisible">Home Page</h1>
       <div className="mb-8">
         <div className="page-column">
-          <h1 className="invisible">Home Page</h1>
-
             <CardGeneral>
                     <h2>Hello, I'm Joses!</h2>
                     <p>
