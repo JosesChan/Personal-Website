@@ -11,7 +11,7 @@ const NavMenu = () => {
       <div className="container flex flex-wrap justify-between items-center mx-auto w-10/12">
 
         {/* Nav Image */}
-        <a href="javascript:void(0)" className="flex items-center md:order-1">
+        <a href="https://www.linkedin.com/feed/?trk=onboarding-landing" className="flex items-center md:order-1">
           <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Joses Chan</span>
         </a>
 

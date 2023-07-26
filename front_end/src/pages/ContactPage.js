@@ -1,11 +1,17 @@
-import TextButton from '../components/TextButton';
-import ContainerText from '../components/ContainerText';
+import CardGeneral from '../components/CardGeneral';
+import { Fragment } from 'react';
 
 const ContactPage = () => {
     return (
-        <ContainerText inputHead="Contact me"
-        inputBody="You can find me on any of these websites!" />
-
+        <Fragment>
+            <h1 className="invisible">Contact Page</h1>
+            <div className="page-column">
+                <CardGeneral>
+                    <h2>Contact me</h2>
+                    <p>You can find me through the following sources</p>
+                </CardGeneral>
+            </div>
+        </Fragment>
     );
 };
 

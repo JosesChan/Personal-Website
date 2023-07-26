@@ -3,6 +3,26 @@
 @tailwind utilities;
 
 
+@layer base{
+  h1 {
+    @apply text-xl font-medium text-large;
+  }
+
+  h2 {
+    @apply text-xl font-medium text-large;
+  }
+
+  p {
+    @apply text-medium;
+  }
+}
+
+@layer components{
+  .card-box {
+    @apply p-4 bg-tertiary rounded-xl shadow-lg flex items-center space-x-4;
+  }
+}
+
 
 @layer utilities {
   .animation-fade-in {
@@ -22,4 +42,7 @@
     }
   }
 
+  .page-column {
+    @apply mx-auto md:max-w-md max-w-xs space-y-12 mt-36 mb-28;
+  }
 }

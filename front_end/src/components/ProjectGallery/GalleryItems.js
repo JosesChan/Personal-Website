@@ -3,15 +3,25 @@ function GalleryItems({data, animationStatus, endAnimation}){
     const style = (animationStatus?'animation-fade-in':null);
 
     return (
-        <div>
+        <div className="box-border">
         {
             data.map((value)=>{
                 return (
-                    <div className={style} onAnimationEnd={endAnimation} key={value.id}>
-                        <img className="h-auto max-w-full rounded-lg" src={value.image} alt=""/>
-                        <h3 className="text-l font-medium text-large">{value.title}</h3>
-                        <p className="text-medium">{value.description}</p>
-                        <a className="blue" href={value.URL} target="_blank">Link to the project.</a>
+                    <div>
+                        <br/>
+                        <br/> 
+                        <div className={style} onAnimationEnd={endAnimation} key={value.id}>
+                            <img className="h-auto mx-auto max-w-full rounded-lg md:max-w-screen-sm md:max-h-screen-sm sm:max-w-screen-xs sm:max-h-screen-xs" src={value.image} alt=""/>
+                            <br/>
+                            <div className="box-content">
+                                <h3 className="text-l font-medium text-large">
+                                    <a className="text-blue-700 underline" href={value.URL} target="_blank" rel="noopener noreferrer">
+                                        {value.title}
+                                    </a>
+                                </h3>
+                                <p className="text-medium">{value.description}</p>
+                            </div>
+                        </div>
                     </div>
                 )
             })

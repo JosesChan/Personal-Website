@@ -7,12 +7,13 @@ import ContactContent from './pages/ContactPage';
 import RecordList from './components/RecordList';
 import Edit from "./components/edit";
 import Create from "./components/create";
+import React, {Fragment} from "react";
 
 function App() {
   return (
-    <>
+    <Fragment>
+      
       <NavMenu />
-      <div className='mx-auto md:max-w-md max-w-xs space-y-12 mt-36 mb-28 container items-center'>
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<AboutContent />} />
@@ -22,8 +23,7 @@ function App() {
           <Route path="/edit/:id" element={<Edit />} />
           <Route path='/Create' element={<Create />} />
         </Routes>
-      </div>
-    </>
+    </Fragment>
   )
 }
 

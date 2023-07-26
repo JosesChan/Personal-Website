@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import ContainerText from './ContainerText';
+import CardGeneral from '../components/CardGeneral';
 
 // Set layout for table
 const Record = (props) => (
@@ -76,9 +76,9 @@ export default function RecordList() {
 
   // This following section will display the table with the records of individuals.
   return (
-    <div>
-      <ContainerText inputHead="To-Do list"
-        inputBody={
+      <CardGeneral className="page-column">
+        <h1 className="invisible">Record Table</h1>
+        <h2>To-Do list</h2>
           <table className="table-auto">
             <thead className="border-b">
               <tr>
@@ -90,7 +90,6 @@ export default function RecordList() {
             </thead>
             <tbody>{recordList()}</tbody>
           </table>
-        } />
-    </div>
+      </CardGeneral>
   );
 }

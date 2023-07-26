@@ -1,4 +1,3 @@
-import selfPicture from '../../imgs/IMG_02.jpg';
 import lungsPicture from '../../imgs/IMG_03.jpg';
 import webscrapePicture from '../../imgs/IMG_04.jpg';
 import googleCloudPicture from '../../imgs/IMG_05.jpg';

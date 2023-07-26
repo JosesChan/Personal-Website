@@ -49,11 +49,12 @@ export default function Create() {
 
   // This following section will display the form that takes the input from the user.
   return (
-    <CardGeneral>
-      <h1 className="text-xl font-medium text-large">Create New Record</h1>
+    <CardGeneral className="page-column">
+      <h1>Create New Record</h1>
         <form onSubmit={onSubmit}>
           <div className="mt-4">
             <TextField type="text" element_id="task" element_text="Task" placeholder="Build a snowman!" value_input={form.task} statehook={(e) => { updateForm({ task: e.target.value }) }} />
+            <br/>
             <TextField type="text" element_id="difficulty" element_text="Difficulty" placeholder="Easy" value_input={form.difficulty} statehook={(e) => { updateForm({ difficulty: e.target.value }) }} />
           </div>
           <div className="my-6">

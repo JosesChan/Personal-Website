@@ -1,5 +1,4 @@
-import React, { Fragment, useEffect, useState } from "react";
-import selfPicture from '../../imgs/IMG_02.jpg';
+import React, {useState} from "react";
 import ProjectJSON from './GalleryData.js';
 import GalleryItems from "./GalleryItems";
 import Tags from "./GalleryTag";
@@ -22,7 +21,7 @@ const Gallery = () => {
     }
 
     return (
-        <CardGeneral className="max-w-screen-sm">            
+        <CardGeneral>            
                 <Tags dataJSON={ProjectJSON} selectData={updateGallery}/>
                 <GalleryItems data={filteredData} animationStatus={animationFadeStatus} endAnimation={changeAnimationStatus}/>
         </CardGeneral>
