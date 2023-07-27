@@ -9,7 +9,7 @@ export default function Edit() {
   const [form, setForm] = useState({
     task: "",
     difficulty: "",
-    length: "",
+    duration: "",
     records: [],
   });
   const params = useParams();
@@ -53,7 +53,7 @@ export default function Edit() {
     const editedPerson = {
       task: form.task,
       difficulty: form.difficulty,
-      length: form.time,
+      duration: form.duration,
     };
 
     // This will send a post request to update the data in the database.
@@ -81,29 +81,26 @@ export default function Edit() {
           <div className="my-6">
             <Radio
               element_id="duration"
-              type="radio"
               value_input="Short"
-              element_name="durationLength"
-              checked_if={form.length === "Short"}
-              statehook={(e) => { updateForm({ length: e.target.value }) }}
+              element_name="duration"
+              checked_if={form.duration === "Short"}
+              statehook={(e) => { updateForm({ duration: e.target.value }) }}
             />
 
             <Radio
               element_id="duration"
-              type="radio"
               value_input="Medium"
-              element_name="durationLength"
-              checked_if={form.length === "Medium"}
-              statehook={(e) => { updateForm({ length: e.target.value }) }}
+              element_name="duration"
+              checked_if={form.duration === "Medium"}
+              statehook={(e) => { updateForm({ duration: e.target.value }) }}
             />
 
             <Radio
               element_id="duration"
-              type="radio"
               value_input="Long"
-              element_name="durationLength"
-              checked_if={form.length === "Long"}
-              statehook={(e) => { updateForm({ length: e.target.value }) }}
+              element_name="duration"
+              checked_if={form.duration === "Long"}
+              statehook={(e) => { updateForm({ duration: e.target.value }) }}
             />
             <TextButton type="submit" prompt="Edit user" />
           </div>

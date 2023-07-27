@@ -12,7 +12,7 @@ export default function Create() {
   const [form, setForm] = useState({
     task: "",
     difficulty: "", 
-    length: "",
+    duration: "",
   });
   const navigate = useNavigate();
 
@@ -43,7 +43,7 @@ export default function Create() {
         return;
       });
 
-    setForm({ task: "", difficulty: "", length: "" });
+    setForm({ task: "", difficulty: "", duration: "" });
     navigate("/Records");
   }
 
@@ -60,29 +60,26 @@ export default function Create() {
           <div className="my-6">
             <Radio
               element_id="duration"
-              type="radio"
               value_input="Short"
-              element_name="durationLength"
-              checked_if={form.length === "Short"}
-              statehook={(e) => { updateForm({ length: e.target.value }) }}
+              element_name="duration"
+              checked_if={form.duration === "Short"}
+              statehook={(e) => { updateForm({ duration: e.target.value }) }}
             />
 
             <Radio
               element_id="duration"
-              type="radio"
               value_input="Medium"
-              element_name="durationLength"
-              checked_if={form.length === "Medium"}
-              statehook={(e) => { updateForm({ length: e.target.value }) }}
+              element_name="duration"
+              checked_if={form.duration === "Medium"}
+              statehook={(e) => { updateForm({ duration: e.target.value }) }}
             />
 
             <Radio
               element_id="duration"
-              type="radio"
               value_input="Long"
-              element_name="durationLength"
-              checked_if={form.length === "Long"}
-              statehook={(e) => { updateForm({ length: e.target.value }) }}
+              element_name="duration"
+              checked_if={form.duration === "Long"}
+              statehook={(e) => { updateForm({ duration: e.target.value }) }}
             />
             <TextButton type="submit" prompt="Create user" />
             </div>

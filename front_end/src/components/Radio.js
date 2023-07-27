@@ -3,7 +3,7 @@ const Radio = (props) => {
         <div class="flex items-center mb-4">
             <input 
             id={props.element_id} 
-            type={props.type} 
+            type="radio" 
             defaultValue={props.value_input} 
             name={props.element_name}
             checked={props.checked_if}

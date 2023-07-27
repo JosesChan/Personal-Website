@@ -8,11 +8,12 @@ import { Fragment } from 'react';
 const Record = (props) => (
   // table row and table data cell
   <tr>
-    <td>{props.record.task}</td>
-    <td>{props.record.difficulty}</td>
-    <td>{props.record.length}</td>
-    <td>
-      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link> |
+    <td className="border border-gray-300 p-3">{props.record.task}</td>
+    <td className="hidden sm:table-cell border border-gray-300 p-3">{props.record.difficulty}</td>
+    <td className="hidden sm:table-cell border border-gray-300 p-3">{props.record.duration}</td>
+    <td className="border border-gray-300 p-3 space-y-2">
+      <Link className="btn btn-link" to={`/edit/${props.record._id}`}>Edit</Link>
+      <br/>
       <button className="btn btn-link" onClick={() => { props.deleteRecord(props.record._id); }}>
         Delete
       </button>
@@ -49,7 +50,7 @@ export default function RecordList() {
     getRecords();
 
     return;
-  }, [records.length]); // data fetching of length, for usage outside of useEffect 
+  }, [records.duration]); // data fetching of duration, for usage outside of useEffect 
 
   // This method will delete a record
   async function deleteRecord(id) {
@@ -83,17 +84,19 @@ export default function RecordList() {
       <h1 className="invisible">Record Table</h1>
       <CardGeneral className="page-column">
         <h2>To-Do list</h2>
-          <table className="table-auto">
+        <div class="grid grid-flow-col text-center p-3"> 
+          <table className="table-auto border border-gray-300">
             <thead className="border-b">
               <tr>
-                <th>Task</th>
-                <th>Difficulty</th>
-                <th>Length</th>
-                <th>Action</th>
+                <th className="border border-gray-300 p-3">Task</th>
+                <th className="hidden sm:table-cell border border-gray-300 p-3">Difficulty</th>
+                <th className="hidden sm:table-cell border border-gray-300 p-3">Duration</th>
+                <th className="border border-gray-300 p-3">Action</th>
               </tr>
             </thead>
             <tbody>{recordList()}</tbody>
           </table>
+        </div>
       </CardGeneral>
     </Fragment>
   );

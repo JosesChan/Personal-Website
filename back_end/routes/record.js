@@ -44,14 +44,14 @@ recordRoutes.route("/record/add").post(function (req, response) {
  let myobj = {
   task: req.body.task,
   difficulty: req.body.difficulty,
-  length: req.body.length,
+  duration: req.body.duration,
  };
  db_connect.collection("records").insertOne(myobj, function (err, res) {
    if (err) throw err;
    response.json(res);
  });
 });
- 
+
 // This section will help you update a record by id.
 recordRoutes.route("/update/:id").post(function (req, response) {
  let db_connect = dbo.getDb();
@@ -60,7 +60,7 @@ recordRoutes.route("/update/:id").post(function (req, response) {
    $set: {
     task: req.body.task,
     difficulty: req.body.difficulty,
-    length: req.body.length,
+    duration: req.body.duration,
    },
  };
  db_connect
