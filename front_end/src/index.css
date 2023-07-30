@@ -5,19 +5,19 @@
 
 @layer base{
   h1 {
-    @apply text-xl font-medium text-large;
+    @apply text-xl font-medium text-large dark:text-white;
   }
 
   h2 {
-    @apply text-xl font-medium text-large;
+    @apply text-xl font-medium text-large dark:text-white;
   }
 
   h3{
-    @apply text-base font-semibold text-large;
+    @apply text-base font-semibold text-large dark:text-white;
   }
 
   p {
-    @apply text-medium;
+    @apply text-medium dark:text-white;
   }
 }
 
