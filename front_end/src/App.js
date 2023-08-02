@@ -11,18 +11,19 @@ import React, {Fragment} from "react";
 
 function App() {
   return (
-    <Fragment>
-      
-      <NavMenu />
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/about' element={<AboutContent />} />
-          <Route path='/Projects' element={<ProjectsContent />} />
-          <Route path='/Contact' element={<ContactContent />} />
-          <Route path='/Records' element={<RecordList/>} />
-          <Route path="/edit/:id" element={<Edit />} />
-          <Route path='/Create' element={<Create />} />
-        </Routes>
+    <Fragment>  
+      <div className='bg-page'>    
+        <NavMenu />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/about' element={<AboutContent />} />
+            <Route path='/Projects' element={<ProjectsContent />} />
+            <Route path='/Contact' element={<ContactContent />} />
+            <Route path='/Records' element={<RecordList/>} />
+            <Route path="/edit/:id" element={<Edit />} />
+            <Route path='/Create' element={<Create />} />
+          </Routes>
+        </div>
     </Fragment>
   )
 }

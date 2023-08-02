@@ -17,18 +17,16 @@ RUN npm install -g @craco/craco
 
 RUN npm install -g serve
 
-# Copy everything to Docker environment
-# COPY . .
-
 # Copies the entire front end into "/front_end" Docker environment
 COPY . /front_end/
 
-# Build for production.
-RUN npm run build
-
 EXPOSE 3000
 
-# CMD [""]
-#CMD ["npm", "start"]
+# Run for development environment
+# CMD ["npm", "start"]
 
-CMD serve -s build -l 3000
+# Run to build production environment
+CMD ["npm", "run", "build"]
+
+# Outdated code to serve static files
+# CMD serve -s build -l 3000

@@ -79,7 +79,7 @@ const AboutContent = () => {
                     </p>
                     <br/>
                     
-                    <h3>Minor Research</h3>     
+                    <h3>Educational Teaching Tool</h3>     
                     <p>
                         I was curious with what games could offer aside from just entertainment. During my ITGS IB Programme, I looked at
                         whether Digital Game Based Learning was beneficial as an additional learning tool. Inspired by similar studies and 

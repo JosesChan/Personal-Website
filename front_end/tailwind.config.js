@@ -3,17 +3,22 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"
   ],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       colors:{
-      large: "#0e1318",
-      medium: "#0d1317",
-      primary: "#93E9BE",
-      secondary: "#B1D8B7",
-      tertiary: "#D4F1F4",
+        
+        page: "rgb(var(--color-page) / <alpha-value>)",
+        large: "rgb(var(--color-large) / <alpha-value>)",
+        medium: "rgb(var(--color-medium) / <alpha-value>)",
+
+        primary: "rgb(var(--color-primary) / <alpha-value>)",
+        secondary: "rgb(var(--color-secondary) / <alpha-value>)",
+        tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
+        character: "rgb(var(--color-character) / <alpha-value>)",
+        
+      },
     },
-  },
   },
   variants: {
     extend: {},

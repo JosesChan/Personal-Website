@@ -9,7 +9,6 @@ const Home = () => {
   return (
     <Fragment>
       <h1 className="invisible">Home Page</h1>
-      <div className="mb-8">
         <div className="page-column">
             <CardGeneral>
                     <h2>Hello, I'm Joses!</h2>
@@ -36,10 +35,10 @@ const Home = () => {
             </CardGeneral>
         </div>
 
-        <div className="justify-center items-center md:max-w-screen-md sm:max-w-xs flex container mx-auto">
+        <div className="justify-center items-center md:max-w-screen-md sm:max-w-xs flex container mx-auto pb-36">
           <Gallery/>
         </div>
-      </div>
+
     </Fragment>
   );
 };
