@@ -33,8 +33,8 @@ const NavMenu = () => {
         </div>
 
         {/* Navbar Items */}
-        <div className={`lg:flex md:justify-between sm:justify-end items-center w-full md:order-2 order-last md:w-auto md:block md:pb-0 ${navbar ? "block animation-fade-in-down" : "hidden"}`}>
-          <ul className="flex flex-col p-4 mt-4 md:space-y-0 space-y-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <div className={`w-full self-center md:items-center md:w-auto md:order-2 order-last self-center md:block ${navbar ? "block animation-fade-in-down" : "hidden"}`}>
+          <ul className={`flex md:flex-row flex-col w-full h-full md:pb-0 p-4 mt-4 mb-4 md:space-y-0 space-y-4 rounded-lg border border-gray-100 md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 text-character md:bg-primary bg-secondary border-gray-700`}>
               
               <CustomListLink to="/" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
