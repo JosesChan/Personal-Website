@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Fragment, useState } from "react";
 import { useNavigate } from "react-router";
 import TextButton from './TextButton';
 import TextField from './TextField';
@@ -49,41 +49,46 @@ export default function Create() {
 
   // This following section will display the form that takes the input from the user.
   return (
-    <CardGeneral className="page-column">
-      <h1>Create New Record</h1>
-        <form onSubmit={onSubmit}>
-          <div className="mt-4">
-            <TextField type="text" element_id="task" element_text="Task" placeholder="Build a snowman!" value_input={form.task} statehook={(e) => { updateForm({ task: e.target.value }) }} />
-            <br/>
-            <TextField type="text" element_id="difficulty" element_text="Difficulty" placeholder="Easy" value_input={form.difficulty} statehook={(e) => { updateForm({ difficulty: e.target.value }) }} />
-          </div>
-          <div className="my-6">
-            <Radio
-              element_id="duration"
-              value_input="Short"
-              element_name="duration"
-              checked_if={form.duration === "Short"}
-              statehook={(e) => { updateForm({ duration: e.target.value }) }}
-            />
+    <Fragment>
+      <h1 className="invisible">Create Record Page</h1>
+      <div className="page-column">
+        <CardGeneral>
+          <h2>Create New Record</h2>
+            <form onSubmit={onSubmit}>
+              <div className="mt-4">
+                <TextField type="text" element_id="task" element_text="Task" placeholder="Build a snowman!" value_input={form.task} statehook={(e) => { updateForm({ task: e.target.value }) }} />
+                <br/>
+                <TextField type="text" element_id="difficulty" element_text="Difficulty" placeholder="Easy" value_input={form.difficulty} statehook={(e) => { updateForm({ difficulty: e.target.value }) }} />
+              </div>
+              <div className="my-6">
+                <Radio
+                  element_id="duration"
+                  value_input="Short"
+                  element_name="duration"
+                  checked_if={form.duration === "Short"}
+                  statehook={(e) => { updateForm({ duration: e.target.value }) }}
+                />
 
-            <Radio
-              element_id="duration"
-              value_input="Medium"
-              element_name="duration"
-              checked_if={form.duration === "Medium"}
-              statehook={(e) => { updateForm({ duration: e.target.value }) }}
-            />
+                <Radio
+                  element_id="duration"
+                  value_input="Medium"
+                  element_name="duration"
+                  checked_if={form.duration === "Medium"}
+                  statehook={(e) => { updateForm({ duration: e.target.value }) }}
+                />
 
-            <Radio
-              element_id="duration"
-              value_input="Long"
-              element_name="duration"
-              checked_if={form.duration === "Long"}
-              statehook={(e) => { updateForm({ duration: e.target.value }) }}
-            />
-            <TextButton type="submit" prompt="Create user" />
-            </div>
-          </form>
-    </CardGeneral>
+                <Radio
+                  element_id="duration"
+                  value_input="Long"
+                  element_name="duration"
+                  checked_if={form.duration === "Long"}
+                  statehook={(e) => { updateForm({ duration: e.target.value }) }}
+                />
+                <TextButton type="submit" prompt="Create user" />
+              </div>
+            </form>
+          </CardGeneral>
+        </div>
+    </Fragment>
   );
-}
+};

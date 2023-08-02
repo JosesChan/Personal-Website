@@ -20,12 +20,13 @@ RUN npm install -g serve
 # Copies the entire front end into "/front_end" Docker environment
 COPY . /front_end/
 
-# Build for production.
-# RUN npm run build
-
 EXPOSE 3000
 
-# CMD [""]
+# Run for development environment
 # CMD ["npm", "start"]
 
-CMD serve -s build -l 3000
+# Run for production environment
+CMD ["npm", "run", "build"]
+
+# Outdated code to serve static files
+# CMD serve -s build -l 3000

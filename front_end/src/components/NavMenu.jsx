@@ -7,14 +7,13 @@ const NavMenu = () => {
   const [navbar, setNavbar] = React.useState(false);
 
   return (
-    <nav className="bg-white lg:px-5 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600">
+    <nav className="bg-primary lg:px-5 sm:px-4 py-2.5 fixed w-full z-20 top-0 left-0 border-b border-secondary">
       <div className="container flex flex-wrap justify-between items-center mx-auto w-10/12">
 
         {/* Nav Image/Logo*/}
         <a href="https://www.linkedin.com/in/fong-sun-joses-chan-b693667b/" className="flex items-center order-1" target="_blank" rel="noopener noreferrer">
-          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Joses Chan</span>
+          <span className="self-center text-xl font-semibold whitespace-nowrap text-character">Joses Chan</span>
         </a>
-
 
         {/* Mobile button */}
         <div className="md:hidden order-2">

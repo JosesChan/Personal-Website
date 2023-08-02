@@ -2,6 +2,30 @@
 version: '3.8'
 services:
 
+  # Add nginx
+  # nginx:
+  #   image: nginx:latest
+  #   volumes:
+  #     - certs:/etc/letsencrypt
+  #     - certs-data:/data/letsencrypt
+  #   ports:
+  #     - 443:443
+  #     - 80:80
+  #   links:  # new
+  #    - webapp
+  #   volumes_from:
+  #   - ./src:/usr/share/nginx/html
+
+  # nginx:
+  #         container_name: nginx
+  #         image: nginx
+  #         build:
+  #             context: .
+  #             dockerfile: Dockerfile
+  #         restart: always
+  #         ports:
+  #             - "8080:8080"
+
   # Add the react service
   react:
     build: 
