@@ -25,7 +25,7 @@ EXPOSE 3000
 # Run for development environment
 # CMD ["npm", "start"]
 
-# Run for production environment
+# Run to build production environment
 CMD ["npm", "run", "build"]
 
 # Outdated code to serve static files
