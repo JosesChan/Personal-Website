@@ -1,85 +1,62 @@
 # Version of Docker-compose
 version: '3.8'
 services:
-
-  # Add nginx
-  # nginx:
-  #   image: nginx:latest
-  #   volumes:
-  #     - certs:/etc/letsencrypt
-  #     - certs-data:/data/letsencrypt
-  #   ports:
-  #     - 443:443
-  #     - 80:80
-  #   links:  # new
-  #    - webapp
-  #   volumes_from:
-  #   - ./src:/usr/share/nginx/html
-
-  # nginx:
-  #         container_name: nginx
-  #         image: nginx
-  #         build:
-  #             context: .
-  #             dockerfile: Dockerfile
-  #         restart: always
-  #         ports:
-  #             - "8080:8080"
-
   # Add the react service
   react:
     build: 
-      # Location to the dockerfile
-      context: ./front_end/
-      # Name of the dockerfile
-      dockerfile: Dockerfile
+        # Location to the dockerfile
+        context: ./front_end/
+        # Name of the dockerfile
+        dockerfile: Dockerfile
     volumes:
         # Bind-mounts configuration
-      - ./front_end:/front_end
+        - ./front_end:/front_end
         # Ignoring any changes made in "node_modules" folder
-      - /front_end/node_modules
+        - /front_end/node_modules
     ports:
         # External port:Internal port
-      - 3000:3000
+        - 3000:3000
+        - 80:80
+        - 443:443
     environment:
-      # Enabling hot reload, CHOKIDAR_USEPOLLING Deprecated
-      - CHOKIDAR_USEPOLLING=true
-      - WATCHPACK_POLLING=true
+        # Enabling hot reload, CHOKIDAR_USEPOLLING Deprecated
+        - CHOKIDAR_USEPOLLING=true
+        - WATCHPACK_POLLING=true
     depends_on:
         # Starts up the node service before starting up the react service
-      - node
+        - node
 
   # Add node service
   node:
     # Creating a custom image
     build:
-      # Location to the Dockerfile
-      context: ./back_end
-      # Name of the Dockerfile
-      dockerfile: Dockerfile
+        # Location to the Dockerfile
+        context: ./back_end
+        # Name of the Dockerfile
+        dockerfile: Dockerfile
     ports:
         # External port:Internal port
-      - 5000:5000
+        - 5000:5000
     # ADD THE CONFIGURATION FROM THIS POINT to create a volume named nodeVolume
     volumes:
-      # Syntax <nameOfVolume>:<directorInDocker>
-      - nodeVolume:/server
-      # ADD THE CONFIGURATION FROM THIS POINT to sync the working directory
-      # for the application to the /app directory in the container
-      - .:/server
-      - /server/node_modules
+        # Syntax <nameOfVolume>:<directorInDocker>
+        - nodeVolume:/server
+        # ADD THE CONFIGURATION FROM THIS POINT to sync the working directory
+        # for the application to the /app directory in the container
+        - .:/server
+        - /server/node_modules
 
     # ADD THE CONFIGURATION FROM THIS POINT to build the MongoDB service
     environment:
-      - PORT=5000
-      # For security, specify a username and password as environmental variables
-      # Username for the mongo database
-      - MONGO_INITDB_ROOT_USERNAME=mern
-      # Password for the mongo database
-      - MONGO_INITDB_ROOT_PASSWORD=merndocker
+        - PORT=5000
+        # For security, specify a username and password as environmental variables
+        # Username for the mongo database
+        - MONGO_INITDB_ROOT_USERNAME=mern
+        # Password for the mongo database
+        - MONGO_INITDB_ROOT_PASSWORD=merndocker
     # Enables the mongo service to start before the node service
     depends_on:
-      - mongo
+        - mongo
 
 
   # Add mongoDB service
@@ -87,17 +64,20 @@ services:
     # Official mongo image from docker.hub
     image: mongo
     environment:
-      # Username for the mongo database
-      - MONGO_INITDB_ROOT_USERNAME=mern
-      # Password for the mongo database
-      - MONGO_INITDB_ROOT_PASSWORD=merndocker
+        # Username for the mongo database
+        - MONGO_INITDB_ROOT_USERNAME=mern
+        # Password for the mongo database
+        - MONGO_INITDB_ROOT_PASSWORD=merndocker
     volumes:
-      # <nameOfVolume>:<directorInDocker>
-      - mongoDB:/data/db
+        # <nameOfVolume>:<directorInDocker>
+        - mongoDB:/data/db
+
+
+
 
  
 # Making the volumes accessible by other containers/services
 volumes:
-  # Declaring the node service volume.
-  nodeVolume:
-  mongoDB:
+    # Declaring the node service volume.
+    nodeVolume:
+    mongoDB:

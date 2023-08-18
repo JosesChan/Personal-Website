@@ -1,5 +1,6 @@
+# Stage 1: Build React App
 # Official node image
-FROM node:17
+FROM node:17 as build
 
 # Setting the working directory to "/front_end/"
 WORKDIR /front_end
@@ -15,7 +16,7 @@ RUN npm install -D tailwindcss@latest postcss@latest autoprefixer@latest cssnano
 # Install craco and serve to run the application.
 RUN npm install -g @craco/craco
 
-RUN npm install -g serve
+# RUN npm install -g serve
 
 # Copies the entire front end into "/front_end" Docker environment
 COPY . /front_end/
@@ -23,10 +24,26 @@ COPY . /front_end/
 EXPOSE 3000
 
 # Run for development environment
-# CMD ["npm", "start"]
+# RUN ["npm", "start"]
 
 # Run to build production environment
-CMD ["npm", "run", "build"]
+RUN ["npm", "run", "build"]
 
-# Outdated code to serve static files
-# CMD serve -s build -l 3000
+
+# Stage 2: Nginx as a proxy & static file server
+FROM nginx
+
+COPY --from=build /front_end/build/ /usr/share/nginx/html
+
+COPY --from=build /front_end/docker-setup/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+
+RUN useradd -ms /bin/bash nonroot
+
+RUN chown -R nonroot:nonroot /etc/nginx/conf.d/ /var/cache/nginx/ /var/run/
+
+USER nonroot
+
+# # Containers run nginx with global directives and daemon off
+ENTRYPOINT ["nginx", "-g", "daemon off;"]

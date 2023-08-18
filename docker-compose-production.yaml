@@ -2,38 +2,28 @@
 version: '3.8'
 
 services:
-    reverseproxy:
-        container_name: reverse
-        hostname: reverse
-        # Creating a custom image
-        build:
-          # Location to the Dockerfile
-          context: ./
-          # Name of the Dockerfile
-          dockerfile: Dockerfile
-
-        image: nginx
-        ports:
-            - 443:443
-            - 80:80
-        restart: always
+    react:
+        build: 
+            # Location to the dockerfile
+            context: ./front_end/
+            # Name of the dockerfile
+            dockerfile: Dockerfile
         volumes:
-            - <path/to/your/config>:/nginx
-            - <path/to/your/certs>:/front_end/ssl/
-
-
-    # nginx:
-    #     depends_on:
-    #         - reverseproxy 
-    #         - node
-    #     image: nginx:alpine
-    #     restart: always
- 
-    # apache:
-    #     depends_on:
-    #         - reverseproxy
-    #     image: httpd:alpine
-    #     restart: always
+            # Bind-mounts configuration
+            - ./front_end:/front_end
+            # Ignoring any changes made in "node_modules" folder
+            - /front_end/node_modules
+        ports:
+            # External port:Internal port
+            - 8080:80
+        environment:
+            # Enabling hot reload, CHOKIDAR_USEPOLLING Deprecated
+            - CHOKIDAR_USEPOLLING=true
+            - WATCHPACK_POLLING=true
+            - NODE_ENV=production
+        depends_on:
+            # Starts up the node service before starting up the react service
+            - node
 
     # Add node service
     node:
@@ -63,7 +53,8 @@ services:
             - MONGO_INITDB_ROOT_USERNAME=mern
             # Password for the mongo database
             - MONGO_INITDB_ROOT_PASSWORD=merndocker
-    # Enables the mongo service to start before the node service
+            - NODE_ENV=production
+        # Enables the mongo service to start before the node service
         depends_on:
             - mongo
 
@@ -83,6 +74,6 @@ services:
 
 # Making the volumes accessible by other containers/services
 volumes:
-  # Declaring the node service volume.
-  nodeVolume:
-  mongoDB:
+    # Declaring the node service volume.
+    nodeVolume:
+    mongoDB:
