@@ -11,12 +11,7 @@ ENV NODE_OPTIONS --openssl-legacy-provider
 COPY package*.json /front_end/
 
 # Install dependencies
-RUN npm install -D tailwindcss@latest postcss@latest autoprefixer@latest cssnano@latest cross-env@latest vite-plugin-html@latest
-
-# Install craco and serve to run the application.
-RUN npm install -g @craco/craco
-
-# RUN npm install -g serve
+RUN npm install -D tailwindcss@latest postcss@latest autoprefixer@latest cssnano@latest cross-env@latest vite-plugin-html@latest @craco/craco
 
 # Copies the entire front end into "/front_end" Docker environment
 COPY . /front_end/
@@ -26,7 +21,7 @@ EXPOSE 3000
 # Run for development environment
 # RUN ["npm", "start"]
 
-# Run to build production environment
+# Run to build and use production environment
 RUN ["npm", "run", "build"]
 
 

@@ -15,7 +15,8 @@ services:
             - /front_end/node_modules
         ports:
             # External port:Internal port
-            - 8080:80
+            - "80:80"
+            - "443:443"
         environment:
             # Enabling hot reload, CHOKIDAR_USEPOLLING Deprecated
             - CHOKIDAR_USEPOLLING=true
