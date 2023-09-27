@@ -3,6 +3,11 @@ const app = express();
 const cors = require("cors");
 require("dotenv").config({ path: "./config.env" });
 
+// Slight Workaround for now
+var corsOptions = {
+  origin: "http://joseschan.com"
+};
+
 // use port set in config.env or 5000
 const port = process.env.PORT || 5000;
 

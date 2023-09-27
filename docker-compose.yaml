@@ -7,7 +7,7 @@ services:
         # Location to the dockerfile
         context: ./front_end/
         # Name of the dockerfile
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.Development
     volumes:
         # Bind-mounts configuration
         - ./front_end:/front_end
@@ -33,7 +33,7 @@ services:
         # Location to the Dockerfile
         context: ./back_end
         # Name of the Dockerfile
-        dockerfile: Dockerfile
+        dockerfile: Dockerfile.Development
     ports:
         # External port:Internal port
         - 5000:5000
