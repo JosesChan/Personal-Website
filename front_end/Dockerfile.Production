@@ -30,7 +30,7 @@ FROM nginx
 
 COPY --from=build /front_end/build/ /usr/share/nginx/html
 
-COPY --from=build /front_end/docker-setup/nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /front_end/docker-setup/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 

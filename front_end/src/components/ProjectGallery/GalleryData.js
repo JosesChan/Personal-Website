@@ -102,7 +102,7 @@ const galleryData =[
         id:11,
         image:pathfindingPicture,
         title:"A* and Djikstra Pathfinding",
-        description:"This was a fun project that helped me understand the beauty of Djikstra's algorithm and how different variations evolved.",
+        description:"This was a fun project that helped me appreciate Djikstra's algorithm and other pathfinding algorithms like A*.",
         tags:["C++"],
         URL:"https://github.com/JosesChan/ParallelProgrammingAssignment",
     },
