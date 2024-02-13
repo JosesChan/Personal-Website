@@ -8,7 +8,7 @@ const ContactPage = () => {
             <div className="page-column">
                 <CardGeneral>
                     <h2>Contact me</h2>
-                    <p>You can find me through the following sources</p>
+                    <p>Below are some of the ways you can get in touch with me.</p>
                 </CardGeneral>
             </div>
         </Fragment>

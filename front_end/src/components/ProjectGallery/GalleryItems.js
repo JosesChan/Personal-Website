@@ -2,13 +2,14 @@ import CardGeneral from "../CardGeneral";
 
 function GalleryItems({data, animationStatus, endAnimation}){
     
-    const style = (animationStatus?'animation-fade-in space-y-4 md:flex w-1/3 md:flex-wrap':null);
+    const style = (animationStatus?'animation-fade-in space-y-4 ':null);
 
     return (
         <ul className="space-y-16 box-border">
         {
             data.map((value)=>{
                 return (
+
                     <li className={style} onAnimationEnd={endAnimation} key={value.id}>     
                         <CardGeneral subClassName="space-y-4"> 
                             <img className="object-scale-down h-auto mx-auto max-w-full rounded-lg md:max-w-screen-sm md:max-h-screen-sm sm:max-w-screen-xs sm:max-h-screen-xs" src={value.image} alt=""/>
@@ -22,6 +23,7 @@ function GalleryItems({data, animationStatus, endAnimation}){
                             </div>
                         </CardGeneral>
                     </li>
+
                 )
             })
         }
