@@ -10,17 +10,27 @@ const AboutContent = () => {
             <div  className="page-column">
                 <CardGeneral>
                     <h2>A little more about me!</h2>
-                    <p>
-                        I am a graduate computer scientist and I love solving problems in a wide variety of complex domains. My greatest asset would be 
-                        my natural curiosity and stubborn determination to produce useful solutions. The way I improve is often through reading documentation 
-                        or research, then shortly applying it to a project. During this process, I want my work criticised in order for me to consider the impact 
-                        that flaw will have and lessen the chance of building bad habits for the future.
 
+                    <h3>Who I am</h3>
+                    <p>
+                        I am a graduate computer scientist who loves solving problems in a wide variety of complex domains. 
+                        I feel ecstatic to be living in an age of information, where we are able to deepen our existing knowledge 
+                        or explore new ideas in areas like history, philosophy and science. Although I find knowledge to be empowering 
+                        and beneficial overall, there is a rising problem with misinformation that I can't stand. On topics that are 
+                        particularly contentious, I rely on pre-existing knowledge and fact checking to verify and minimise false information.
                     </p>   
 
                     <h2>
                         "Slow is smooth, smooth is fast"
                     </h2>
+
+                    <h3>My habits</h3>
+                    <p>
+                        My greatest asset in life would be my natural curiosity and stubborn determination to produce useful solutions. 
+                        The way I improve is often through reading documentation or research, then shortly applying it to a project. 
+                        Criticism is neccessary in this process for me to improve, raising awareness of important flaws and 
+                        reducing the chance of bad habits for the future.  
+                    </p>
 
                 </CardGeneral>
 
@@ -47,9 +57,6 @@ const AboutContent = () => {
                         can be used by NVD companies making similar product for security or ecologists usage.
                     </p>
                 </CardGeneral>
-
-                
-
 
             </div>
         </Fragment>

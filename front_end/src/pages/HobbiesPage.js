@@ -74,7 +74,7 @@ const HobbiesContent = () => {
                         making a game. I practise techniques like retopology and sculpting by working it into my activities in highschool, 
                         recreating historical patterns of swords in my freetime while rendering animations for my highschool project. My most 
                         recent usage of Blender was for creating digital models for my team software engineering project in robotics which used 
-                        inverse kinematics, sensors and pathfinding for the digital prototype.
+                        inverse kinematics, sensors and pathfinding to build a digital prototype.
                     </p>
                 </CardGeneral>
 
@@ -94,7 +94,7 @@ const HobbiesContent = () => {
                         Having been a participant in multiple DND games, I now host a weekly session with my friends. Having gone through many iterations 
                         of improvements, our current game now uses the virtual tabletop software Foundry. My players connect to my device set up to host 
                         Foundry using ports exposed with ngrok. We use many packages made by great developers passionate in the DND sphere, which allow us 
-                        to customise scripts and automate mundane tasks in Javascript to help run the story.
+                        to customise scripts and automate mundane tasks in Javascript to aid in running the story.
                     </p>
                     <br/>
                     <PictureStandalone location={dndPicture} altTag="Image of Foundry DND software used to host online games, multiple tokens of characters on a map"/>
