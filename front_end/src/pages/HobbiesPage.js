@@ -1,6 +1,7 @@
 import CardGeneral from '../components/CardGeneral';
 import { Fragment } from 'react';
-
+import PictureStandalone from '../components/PictureStandalone';
+import dndPicture from '../imgs/IMG_14.jpg'
 import swordPicture from '../imgs/IMG_1955.jpg';
 
 const HobbiesContent = () => {

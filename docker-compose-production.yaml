@@ -1,6 +1,8 @@
 # Version of Docker-compose
 version: '3.8'
 
+name: personal-web-app
+
 services:
     react-nginx:
         build: 
@@ -12,10 +14,10 @@ services:
         volumes:
             # Bind-mounts configuration
             - ./front_end:/front_end
-            - ./front_end/docker-setup/nginx/default.conf/:/etc/nginx/conf.d/:ro
+            - ./front_end/docker-setup/nginx/default.conf/:/etc/nginx/conf.d/default.conf:ro
             # - ./certbot/conf:/etc/letsencrypt/:ro
             # - ./certbot/www:/var/www/certbot/:ro
-            - ./etc/letsencrypt/live/joseschan.com/:/etc/nginx/certs
+            # - ./etc/letsencrypt/live/joseschan.com/:/etc/nginx/certs
 
             # Ignoring any changes made in "node_modules" folder
             - /front_end/node_modules
@@ -31,13 +33,6 @@ services:
         depends_on:
             # Starts up the node service before starting up the react service
             - node
-
-    certbot:
-        image: certbot/certbot:latest
-        restart: unless-stopped
-        volumes:
-            - ./certbot/conf:/etc/letsencrypt/:rw
-            - ./certbot/www:/var/www/certbot/:rw
 
     # Add node service
     node:

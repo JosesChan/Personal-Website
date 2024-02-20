@@ -1,6 +1,4 @@
 import { Fragment } from 'react';
-import PictureStandalone from '../components/PictureStandalone';
-import dndPicture from '../imgs/IMG_14.jpg'
 import CardGeneral from '../components/CardGeneral';
 
 const AboutContent = () => {
@@ -8,22 +6,28 @@ const AboutContent = () => {
         <Fragment>
             <h1 className="invisible">About Page</h1>
             <div  className="page-column">
-                <CardGeneral>
-                    <h2>A little more about me!</h2>
+            <h2 className="text-center">A little more about me!</h2>
 
-                    <h3>Who I am</h3>
+
+                <CardGeneral>
+                    <h3>Who am I?</h3>
                     <p>
                         I am a graduate computer scientist who loves solving problems in a wide variety of complex domains. 
                         I feel ecstatic to be living in an age of information, where we are able to deepen our existing knowledge 
-                        or explore new ideas in areas like history, philosophy and science. Although I find knowledge to be empowering 
+                        or explore new ideas in areas like history, philosophy and science. 
+                    </p>
+                    <br/>
+                    <p>
+                        Although I find knowledge to be empowering 
                         and beneficial overall, there is a rising problem with misinformation that I can't stand. On topics that are 
                         particularly contentious, I rely on pre-existing knowledge and fact checking to verify and minimise false information.
-                    </p>   
+                    </p>
 
+                    <br/>
                     <h2>
                         "Slow is smooth, smooth is fast"
                     </h2>
-
+                    <br/>
                     <h3>My habits</h3>
                     <p>
                         My greatest asset in life would be my natural curiosity and stubborn determination to produce useful solutions. 
