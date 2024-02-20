@@ -45,8 +45,13 @@ const NavMenu = () => {
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                 About
               </CustomListLink>
+
+              <CustomListLink to="/Hobbies" className={({isActive}) => 
+              (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
+                Hobbies
+              </CustomListLink>
               
-              <CustomListLink to="/Records" className={({isActive}) => 
+              {/* <CustomListLink to="/Records" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                 Record List
               </CustomListLink>
@@ -54,7 +59,7 @@ const NavMenu = () => {
               <CustomListLink to="/Create" className={({isActive}) => 
               (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
                 Create Record
-              </CustomListLink>
+              </CustomListLink> */}
               
           </ul>
         </div>

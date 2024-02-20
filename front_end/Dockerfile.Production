@@ -1,6 +1,6 @@
 # Stage 1: Build React App
 # Official node image
-FROM node:17 as build
+FROM node:latest as build
 
 # Setting the working directory to "/front_end/"
 WORKDIR /front_end
@@ -26,15 +26,17 @@ RUN ["npm", "run", "build"]
 
 
 # Stage 2: Nginx as a proxy & static file server
-FROM nginx
+FROM nginx:alpine
 
-COPY --from=build /front_end/build/ /usr/share/nginx/html
+RUN rm /etc/nginx/conf.d/default.conf
+
+COPY --from=build /front_end/build/ /usr/share/nginx/html/
 
 COPY --from=build /front_end/docker-setup/nginx/default.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 
-RUN useradd -ms /bin/bash nonroot
+RUN adduser -D -s /bin/bash nonroot
 
 RUN chown -R nonroot:nonroot /etc/nginx/conf.d/ /var/cache/nginx/ /var/run/
 
