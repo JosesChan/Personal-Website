@@ -1,5 +1,4 @@
-# Use a lighter version of Node as a parent image
-# FROM mhart/alpine-node:8.11.4
+# Dockerfile copies over package json then runs an npm installs to get relevant packages
 
 # Set base image to node's official image
 FROM node:17
@@ -20,5 +19,4 @@ COPY . /back_end/
 EXPOSE 5000
 
 # Run the app when the container launches
-CMD ["npm", "run", "production"]
-
+CMD ["npm", "run", "development"]

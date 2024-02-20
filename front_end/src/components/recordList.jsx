@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import CardGeneral from '../components/CardGeneral';
+import CardGeneral from './CardGeneral';
 import { Fragment } from 'react';
 
 

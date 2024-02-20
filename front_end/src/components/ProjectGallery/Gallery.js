@@ -2,8 +2,6 @@ import React, {useState} from "react";
 import ProjectJSON from './GalleryData.js';
 import GalleryItems from "./GalleryItems";
 import Tags from "./GalleryTag";
-import CardGeneral from "../CardGeneral";
-
 
 const Gallery = () => {
 
@@ -21,10 +19,10 @@ const Gallery = () => {
     }
 
     return (
-        <CardGeneral>            
+            <div>     
                 <Tags dataJSON={ProjectJSON} selectData={updateGallery}/>
                 <GalleryItems data={filteredData} animationStatus={animationFadeStatus} endAnimation={changeAnimationStatus}/>
-        </CardGeneral>
+            </div>
     );
 };  
             
