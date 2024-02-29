@@ -23,9 +23,12 @@ const Home = () => {
                     <h2>Why does this website exist?</h2>
                     <p>
                       I made this website to both showcase my work and learn front end development skills such as HTML, CSS and Javascript. 
-                      At the moment, it uses React, Node.js, Express, MongoDB and Tailwind CSS to create a responsive MERN website. Note: 
-                      I disabled access to using the MongoDB database until I finish implementing nginx properly.
+                      At the moment, it uses React, Node.js, Express, MongoDB and Tailwind CSS to create a responsive MERN website.
                     </p>                    
+                    <br/>
+                    <p>
+                      Note: I disabled access to using the MongoDB database until I finish implementing nginx properly and implement at least some security.
+                    </p>
             </CardGeneral>
           
             <CardGeneral>
