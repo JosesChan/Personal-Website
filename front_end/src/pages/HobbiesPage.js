@@ -9,8 +9,10 @@ const HobbiesContent = () => {
         <Fragment>
             <h1 className="invisible">Hobbies Page</h1>
             <div className="page-column">
+            <h2 className="text-center md:text-3xl">My Hobbies</h2>
+
                 <CardGeneral>
-                    <h2>Hobbies</h2>
+                    <h2>Purpose for Practicing</h2>
                     <p>
                         I believe that its good to have a wide variety of interests since its a good opportunity to practise transferable 
                         skills and provides a beneficial effect to mental health. Below are some of my hobbies that I find particularly 

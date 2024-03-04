@@ -6,11 +6,9 @@ const AboutContent = () => {
         <Fragment>
             <h1 className="invisible">About Page</h1>
             <div  className="page-column">
-            <h2 className="text-center">A little more about me!</h2>
-
-
+            <h2 className="text-center md:text-3xl">A little more about me!</h2>
                 <CardGeneral>
-                    <h3>Who am I?</h3>
+                    <h2>Who am I?</h2>
                     <p>
                         I am a graduate computer scientist who loves solving problems in a wide variety of complex domains. 
                         I feel ecstatic to be living in an age of information, where we are able to deepen our existing knowledge 
@@ -18,50 +16,38 @@ const AboutContent = () => {
                     </p>
                     <br/>
                     <p>
-                        Although I find knowledge to be empowering 
-                        and beneficial overall, there is a rising problem with misinformation that I can't stand. On topics that are 
-                        particularly contentious, I rely on pre-existing knowledge and fact checking to verify and minimise false information.
+                        Although I find knowledge to be empowering, I believe there is a rising problem with misinformation which I can't stand. 
+                        This is especially important on topics that are rather contentious. 
                     </p>
-
                     <br/>
-                    <h2>
-                        "Slow is smooth, smooth is fast"
-                    </h2>
-                    <br/>
-                    <h3>My habits</h3>
                     <p>
-                        My greatest asset in life would be my natural curiosity and stubborn determination to produce useful solutions. 
-                        The way I improve is often through reading documentation or research, then shortly applying it to a project. 
-                        Criticism is neccessary in this process for me to improve, raising awareness of important flaws and 
-                        reducing the chance of bad habits for the future.  
+                        To minimise the risk of bias and inaccurate information. I rely on my own pre-existing knowledge and enjoy extensive fact 
+                        checking of various conflicting sources. 
                     </p>
-
+                    <br/>
+                    <p>
+                        This reliance on pre-existing knowledge emphasises my need to research and discover 
+                        information, especially from sources that are neutral leaning and oriented to factual reports.
+                    </p>
                 </CardGeneral>
-
+                <br/>
+                <br/>
+                <h2 className="text-center md:text-3xl">"In every person, a universe"</h2>
                 <CardGeneral>
-                    <h2>Learning New Technology</h2>
-                    <br/>
-                    <h3>Keeping up on innovation</h3>
+                    <h2>Habits and Principles</h2>
                     <p>
-                        I am highly interested in new technology and their current possible applications. I like the idea of technology
-                        being an open door from a paper on Medieval Technology and Social Change by Lynn White Jr. Suggesting innovations are relient on
-                        contextual factors like culture, politics and economy in order to be implemented. Which makes it my duty to not only stay up to date 
-                        on new innovation through industry whitepapers or tech conferences, but also foster an openmind to change and experiment with new ideas.
-                    </p>
+                        My main motivating force is curiosity, which pushes me to grow new skills and explore different ideas. 
+                        I value all mediums of knowledge, from direct experience or written information. Accumlating a wealth of knowledge gives me 
+                        great joy and provides even more when I get to use it, especially when trying to understand and relate to experiences of other humans.
+                    </p> 
                     <br/>
-                    <h3>Reflecting on emerging technology</h3>
                     <p>
-                        I love to imagine the exciting application of emerging tech like augmented reality, artificial intelligence and cloud computing. It is important 
-                        to learn from past experiences and using case studies allows us to develop better solutions for the future.
-
-                        Take for example augmented reality, there are numerous possible implementation in areas like education, architecture and industrial use.
-                        One example I didn't expect was in the millitary, Microsoft is in development of IVAS to enhance US army night vision capabilities which
-                        looks incredible. However, Microsoft's current development in 2023, has faced numerous challenges and roadblocks to its implementation.
-                        Even if IVAS isn't adopted, lessons learnt from its development like reducing bulk or minimising emitted light from the device
-                        can be used by NVD companies making similar product for security or ecologists usage.
+                        Part of my quest for knowledge involves reflecting and critcising myself. It is therefore important to be flexible and open enough to 
+                        take in new ideas. Through processes like assimilating new knowledge into my current understanding or by reshaping my preconceptions 
+                        to accommodate new information. It is also just as important to recognise my own biases and bias of the sources to avoid drawing
+                        a flawed understanding of a topic.
                     </p>
                 </CardGeneral>
-
             </div>
         </Fragment>
     );
