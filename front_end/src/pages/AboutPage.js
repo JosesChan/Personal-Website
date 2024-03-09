@@ -34,7 +34,7 @@ const AboutContent = () => {
                 <br/>
                 <h2 className="text-center md:text-3xl">"In every person, a universe"</h2>
                 <CardGeneral>
-                    <h2>Habits and Principles</h2>
+                    <h2>Personal Principle</h2>
                     <p>
                         My main motivating force is curiosity, which pushes me to grow new skills and explore different ideas. 
                         I value all mediums of knowledge, from direct experience or written information. Accumlating a wealth of knowledge gives me 

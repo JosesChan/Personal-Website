@@ -3,22 +3,24 @@ import PictureStandalone from '../components/PictureStandalone';
 import selfPicture from '../imgs/IMG_02.jpg';
 import Gallery from '../components/ProjectGallery/Gallery';
 import CardGeneral from '../components/CardGeneral';
+import CardPicture from '../components/CardPicture';
 
 
 const Home = () => {
   return (
     <Fragment>
       <h1 className="invisible">Home Page</h1>
-        <div className="page-column">
-            <CardGeneral>
-                    <h2>Hello, I'm Joses!</h2>
+
+        <div className="mx-auto max-w-2xl space-y-12 mt-36">
+          <CardPicture location={selfPicture} altTag="Me standing in a field">
+          <h2>Hello, I'm Joses!</h2>
                     <p>
                         I am a graduate from the University of Lincoln and I like to make useful software projects.
-                    </p>                    
-            </CardGeneral>
-          
-          <PictureStandalone location={selfPicture} altTag="Me standing in a field" />
+                    </p>       
+          </CardPicture>
+        </div>
 
+        <div className="page-column">
             <CardGeneral>
                     <h2>Why does this website exist?</h2>
                     <p>
