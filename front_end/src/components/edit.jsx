@@ -18,8 +18,16 @@ export default function Edit() {
 
   useEffect(() => {
     async function fetchData() {
+
+      // replace later, make a env variable instead of running this piece of code multiple times.
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        const appURL = 'http://localhost'
+        } else {
+        const appURL = 'http://joseschan.com'
+      }
+
       const id = params.id.toString();
-      const response = await fetch(`http://localhost:5000/record/${params.id.toString()}`);
+      const response = await fetch(appURL+`:5000/record/${params.id.toString()}`);
 
       if (!response.ok) {
         const message = `An error has occurred: ${response.statusText}`;
@@ -58,7 +66,7 @@ export default function Edit() {
     };
 
     // This will send a post request to update the data in the database.
-    await fetch(`http://localhost:5000/update/${params.id}`, {
+    await fetch(appURL+`:5000/update/${params.id}`, {
       method: "POST",
       body: JSON.stringify(editedPerson),
       headers: {
@@ -84,7 +92,7 @@ export default function Edit() {
               </div>
               <div className="my-6">
                 <Radio
-                  element_id="duration"
+                  element_id="durationShort"
                   value_input="Short"
                   element_name="duration"
                   checked_if={form.duration === "Short"}
@@ -92,7 +100,7 @@ export default function Edit() {
                 />
 
                 <Radio
-                  element_id="duration"
+                  element_id="durationMedium"
                   value_input="Medium"
                   element_name="duration"
                   checked_if={form.duration === "Medium"}
@@ -100,7 +108,7 @@ export default function Edit() {
                 />
 
                 <Radio
-                  element_id="duration"
+                  element_id="durationLong"
                   value_input="Long"
                   element_name="duration"
                   checked_if={form.duration === "Long"}

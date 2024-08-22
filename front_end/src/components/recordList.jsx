@@ -46,10 +46,16 @@ export default function RecordList() {
 
     // create an asyrnchronous function in effect hook
     async function getRecords() {
-      //if(){
-        
-      //}
-      const response = await fetch(`http://joseschan.com:5000/record/`);
+
+      // replace later, make a env variable instead of running this piece of code multiple times.
+      if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+        const appURL = 'http://localhost'
+        } else {
+        const appURL = 'http://joseschan.com'
+      }
+    
+
+      const response = await fetch(appURL+`:5000/record/`);
 
       // If theres a problem, create an alert window with the error message
       if (!response.ok) {
@@ -72,7 +78,7 @@ export default function RecordList() {
   // This method will delete a record
   async function deleteRecord(id) {
     // wait until fetch promise has arisen
-    await fetch(`http://joseschan.com:5000/${id}`, {
+    await fetch(appURL+`:5000/${id}`, {
       method: "DELETE"
     });
 

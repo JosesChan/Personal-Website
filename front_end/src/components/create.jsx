@@ -28,10 +28,17 @@ export default function Create() {
   async function onSubmit(e) {
     e.preventDefault();
 
+    // replace later, make a env variable instead of running this piece of code multiple times.
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
+      const appURL = 'http://localhost'
+      } else {
+      const appURL = 'http://joseschan.com'
+    }
+
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPerson = { ...form };
 
-    await fetch("http://localhost:5000/record/add", {
+    await fetch(appURL+":5000/record/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -62,7 +69,7 @@ export default function Create() {
               </div>
               <div className="my-6">
                 <Radio
-                  element_id="duration"
+                  element_id="durationShort"
                   value_input="Short"
                   element_name="duration"
                   checked_if={form.duration === "Short"}
@@ -70,7 +77,7 @@ export default function Create() {
                 />
 
                 <Radio
-                  element_id="duration"
+                  element_id="durationMedium"
                   value_input="Medium"
                   element_name="duration"
                   checked_if={form.duration === "Medium"}
@@ -78,7 +85,7 @@ export default function Create() {
                 />
 
                 <Radio
-                  element_id="duration"
+                  element_id="durationLong"
                   value_input="Long"
                   element_name="duration"
                   checked_if={form.duration === "Long"}
