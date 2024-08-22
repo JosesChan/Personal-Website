@@ -46,7 +46,10 @@ export default function RecordList() {
 
     // create an asyrnchronous function in effect hook
     async function getRecords() {
-      const response = await fetch(`http://localhost:5000/record/`);
+      //if(){
+        
+      //}
+      const response = await fetch(`http://joseschan.com:5000/record/`);
 
       // If theres a problem, create an alert window with the error message
       if (!response.ok) {
@@ -69,7 +72,7 @@ export default function RecordList() {
   // This method will delete a record
   async function deleteRecord(id) {
     // wait until fetch promise has arisen
-    await fetch(`http://localhost:5000/${id}`, {
+    await fetch(`http://joseschan.com:5000/${id}`, {
       method: "DELETE"
     });
 
