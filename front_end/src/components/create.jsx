@@ -28,17 +28,10 @@ export default function Create() {
   async function onSubmit(e) {
     e.preventDefault();
 
-    // replace later, make a env variable instead of running this piece of code multiple times.
-    if (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') {
-      const appURL = 'http://localhost'
-      } else {
-      const appURL = 'http://joseschan.com'
-    }
-
     // When a post request is sent to the create url, we'll add a new record to the database.
     const newPerson = { ...form };
 
-    await fetch(appURL+":5000/record/add", {
+    await fetch("http://joseschan.com:5000/record/add", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

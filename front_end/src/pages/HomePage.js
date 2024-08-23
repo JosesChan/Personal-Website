@@ -26,9 +26,6 @@ const Home = () => {
                       At the moment, it uses React, Node.js, Express, MongoDB and Tailwind CSS to create a responsive MERN website.
                     </p>                    
                     <br/>
-                    <p>
-                      Note: I disabled access to using the MongoDB database until I finish implementing nginx properly and implement at least some security.
-                    </p>
             </CardGeneral>
           
             <CardGeneral>

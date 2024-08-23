@@ -12,40 +12,42 @@ const AboutContent = () => {
                     <p>
                         I am a graduate computer scientist who loves solving problems in a wide variety of complex domains. 
                         I feel ecstatic to be living in an age of information, where we are able to deepen our existing knowledge 
-                        or explore new ideas in areas like history, philosophy and science. 
+                        or explore new ideas through the internet. 
                     </p>
                     <br/>
                     <p>
-                        Although I find knowledge to be empowering, I believe there is a rising problem with misinformation which I can't stand. 
-                        This is especially important on topics that are rather contentious. 
+                        This freedom of information perfectly suits my curious nature. Allowing me to pursue knowledge in areas  
+                        such as history, philosophy, while maintaining my specialty in computer science.
                     </p>
                     <br/>
                     <p>
-                        To minimise the risk of bias and inaccurate information. I rely on my own pre-existing knowledge and enjoy extensive fact 
-                        checking of various conflicting sources. 
+                        However, there exists a problem with rampant misinformation on the internet.  
+                        To minimise the risk of bias and inaccurate information, 
+                        I rely on my own pre-existing knowledge combined with the approach of "Trust, but verify". 
                     </p>
                     <br/>
                     <p>
-                        This reliance on pre-existing knowledge emphasises my need to research and discover 
-                        information, especially from sources that are neutral leaning and oriented to factual reports.
+                        This reliance on pre-existing knowledge, pushes me to research and discover 
+                        new information faster than public consciousness, ideally using sources that are neutral leaning and written as formal reports.
                     </p>
                 </CardGeneral>
                 <br/>
                 <br/>
                 <h2 className="text-center md:text-3xl">"In every person, a universe"</h2>
+                <h3 className="text-center md:text-2xl">- Elie Wiesel</h3>
                 <CardGeneral>
-                    <h2>Habits and Principles</h2>
+                    <h2>Learning and Reflection</h2>
                     <p>
-                        My main motivating force is curiosity, which pushes me to grow new skills and explore different ideas. 
-                        I value all mediums of knowledge, from direct experience or written information. Accumlating a wealth of knowledge gives me 
-                        great joy and provides even more when I get to use it, especially when trying to understand and relate to experiences of other humans.
+                        My main motivator is curiosity, which pushes me to grow new skills and explore different ideas. 
+                        I value all mediums of knowledge, from first hand experience to written accounts. The mere act of accumlating a wealth of knowledge gives me 
+                        great joy. Especially if I can apply what I've learned to solve problems and help others.
                     </p> 
                     <br/>
                     <p>
-                        Part of my quest for knowledge involves reflecting and critcising myself. It is therefore important to be flexible and open enough to 
-                        take in new ideas. Through processes like assimilating new knowledge into my current understanding or by reshaping my preconceptions 
-                        to accommodate new information. It is also just as important to recognise my own biases and bias of the sources to avoid drawing
-                        a flawed understanding of a topic.
+                        Part of my quest for knowledge involves reflecting and critcising what I know to determine the truth. 
+                        Making it quite important for me to be flexible and open to new ideas that contradict my own. 
+                        Therefore, when I learn a contradictory idea, I try to remain aware of my biases and see if it matches my own 
+                        world view, or be willing to adjust my own flawed understanding if I can't comprehend it.
                     </p>
                 </CardGeneral>
             </div>
