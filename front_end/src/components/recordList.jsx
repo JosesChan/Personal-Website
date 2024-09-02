@@ -99,39 +99,41 @@ export default function RecordList() {
   return (
     <Fragment>
       <h1 className="invisible">Record Table</h1>
-        <div className="page-column">
-          <CardGeneral>
-            <h2 className="text-center">Website To-Do List / CRUD Example</h2>
-            <div className="grid grid-flow-col text-center p-3"> 
-              <table className="table-auto border border-gray-500">
-                <thead className="border-b">
-                  <tr>
-                    <th className="border border-gray-500 p-3">
-                      <h3>
-                        Task
-                      </h3>
-                    </th>
-                    <th className="hidden sm:table-cell border border-gray-500 p-3">
-                      <h3>
-                        Difficulty
-                      </h3>
-                    </th>
-                    <th className="hidden sm:table-cell border border-gray-500 p-3">
-                      <h3>
-                        Duration
-                      </h3>
-                    </th>
-                    <th className="border border-gray-500 p-3">
-                      <h3>
-                        Action
-                      </h3>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>{recordList()}</tbody>
-              </table>
-            </div>
-          </CardGeneral>
+        <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
+          <div className="page-column">
+            <CardGeneral>
+              <h2 className="text-center">Website To-Do List / CRUD Example</h2>
+              <div className="grid grid-flow-col text-center p-3"> 
+                <table className="table-auto border border-gray-500">
+                  <thead className="border-b">
+                    <tr>
+                      <th className="border border-gray-500 p-3">
+                        <h3>
+                          Task
+                        </h3>
+                      </th>
+                      <th className="hidden sm:table-cell border border-gray-500 p-3">
+                        <h3>
+                          Difficulty
+                        </h3>
+                      </th>
+                      <th className="hidden sm:table-cell border border-gray-500 p-3">
+                        <h3>
+                          Duration
+                        </h3>
+                      </th>
+                      <th className="border border-gray-500 p-3">
+                        <h3>
+                          Action
+                        </h3>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>{recordList()}</tbody>
+                </table>
+              </div>
+            </CardGeneral>
+          </div>
         </div>
     </Fragment>
   );

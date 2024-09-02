@@ -11,7 +11,7 @@ ENV NODE_OPTIONS --openssl-legacy-provider
 COPY package*.json /front_end/
 
 # Install dependencies
-RUN npm install -D tailwindcss@latest postcss@latest autoprefixer@latest cssnano@latest cross-env@latest vite-plugin-html@latest @craco/craco
+RUN npm install -D tailwindcss@latest postcss@latest autoprefixer@latest cssnano@latest cross-env@latest vite-plugin-html@latest @craco/craco use-local-storage
 
 # Copies the entire front end into "/front_end" Docker environment
 COPY . /front_end/

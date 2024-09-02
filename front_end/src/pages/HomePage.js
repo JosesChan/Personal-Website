@@ -9,6 +9,7 @@ const Home = () => {
   return (
     <Fragment>
       <h1 className="invisible">Home Page</h1>
+      <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
         <div className="page-column">
             <CardGeneral>
                     <h2>Hello, I'm Joses!</h2>
@@ -22,10 +23,9 @@ const Home = () => {
             <CardGeneral>
                     <h2>Why does this website exist?</h2>
                     <p>
-                      I made this website to both showcase my work and learn front end development skills such as HTML, CSS and Javascript. 
+                      I made this website to both showcase my work and learn front end development skills, such as HTML, CSS and Javascript. 
                       At the moment, it uses React, Node.js, Express, MongoDB and Tailwind CSS to create a responsive MERN website.
-                    </p>                    
-                    <br/>
+                    </p>
             </CardGeneral>
           
             <CardGeneral>
@@ -35,10 +35,13 @@ const Home = () => {
                     </p>                    
             </CardGeneral>
         </div>
+      </div>
 
+      <div className="top-0 z-[-2] h-full w-full bg-page">
         <div className="justify-center items-center md:max-w-screen-md sm:max-w-xs flex container mx-auto pb-36">
           <Gallery/>
         </div>
+      </div>
 
     </Fragment>
   );
