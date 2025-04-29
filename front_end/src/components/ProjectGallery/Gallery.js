@@ -18,6 +18,8 @@ const Gallery = () => {
         setFadeAnimationStatus((prev) => !prev);
     }
 
+
+    /*Reduce gallery size and turn into a more smaller format*/
     return (
             <div>     
                 <Tags dataJSON={ProjectJSON} selectData={updateGallery}/>
