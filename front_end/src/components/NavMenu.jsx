@@ -58,6 +58,11 @@ const NavMenu = () => {
               (isActive?'navbar-active navbar-header' : 'navbar-inactive navbar-header')}>
                 Hobbies
               </CustomListLink>
+
+              <CustomListLink to="/blog" className={({isActive}) => 
+              (isActive?'navbar-active navbar-header' : 'navbar-inactive navbar-header')}>
+                Blog
+              </CustomListLink>
               
               <CustomListLink to="/Records" className={({isActive}) => 
               (isActive?'navbar-active navbar-header' : 'navbar-inactive navbar-header')}>
