@@ -4,12 +4,20 @@
 /node_modules
 /.pnp
 .pnp.js
+front_end/node_modules
+back_end/node_modules
 
 # testing
 /coverage
 
 # production
 /build
+front_end/build
+
+# cache
+front_end/node_modules/.cache
+back_end/node_modules/.cache
+.cache
 
 # misc
 .DS_Store
