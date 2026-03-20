@@ -19,11 +19,18 @@ module.exports = {
         ambient: "rgb(var(--color-ambient) / <alpha-value>)",
         
       },
+      fontFamily: {
+        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        sans: ['Jost', 'system-ui', 'sans-serif'],
+      },
+      letterSpacing: {
+        widest: '0.2em',
+        wider: '0.12em',
+      },
     },
     backgroundImage:{
       'radial-gradient-top': 'radial-gradient(125% 125% at 50% 90%, rgba(var(--color-page)) 40%, rgba(var(--color-ambient)) 100%)',
       'radial-gradient-bottom': 'radial-gradient(125% 125% at 50% 10%, rgba(var(--color-page)) 40%, rgba(var(--color-ambient)) 100%)',
-      // 'spotted-background':'bg-[#000000] bg-[radial-gradient(#ffffff33_1px,rgba(var(--color-page))_1px)] bg-[size:20px_20px]',
     },
   },
   variants: {

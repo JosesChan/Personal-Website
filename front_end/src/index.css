@@ -4,58 +4,100 @@
 
 
 @layer base{
+  html {
+    font-family: 'Jost', system-ui, sans-serif;
+  }
+
   h1 {
-    @apply text-xl font-medium text-character;
+    @apply font-serif font-light tracking-widest uppercase text-character;
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    letter-spacing: 0.2em;
   }
 
   h2 {
-    @apply text-xl font-medium text-character;
+    @apply font-serif font-light text-character;
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    letter-spacing: 0.06em;
   }
 
-  h3{
-    @apply text-base font-semibold text-character;
+  h3 {
+    @apply font-sans font-normal tracking-wider uppercase text-character;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
   }
 
   p {
-    @apply text-base text-character;
+    @apply font-sans font-light text-character leading-relaxed;
+    font-size: 0.9375rem;
+  }
+
+  a {
+    @apply text-character;
   }
 
   :root {
-    --color-page: 230 230 230;
-    --color-large: 14 19 24;
-    --color-medium: 13 19 23;
-    --color-primary: 240 250 250;
-    --color-secondary: 215 215 215;
-    --color-tertiary: 220 248 250;
-    --color-character: 0 0 0;
-    --color-ambient: 82 227 162;
+    /* Light mode — warm cream/parchment palette */
+    --color-page: 245 240 232;         /* #F5F0E8 warm parchment */
+    --color-large: 28 25 23;           /* #1C1917 warm near-black */
+    --color-medium: 40 36 32;          /* #282420 dark warm brown */
+    --color-primary: 253 251 247;      /* #FDFBF7 off-white */
+    --color-secondary: 225 217 205;    /* #E1D9CD warm light sand */
+    --color-tertiary: 237 232 222;     /* #EDE8DE warm sand card */
+    --color-character: 28 25 23;       /* #1C1917 warm near-black text */
+    --color-ambient: 196 168 130;      /* #C4A882 warm gold accent */
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-page: 9 10 15;
-      --color-large: 15 23 42;
-      --color-medium: 13 19 23;
-      --color-primary: 17 24 39;
-      --color-secondary: 44 58 74;
-      --color-tertiary: 35 38 46;
-      --color-character: 180 180 180;
-      --color-ambient: 36 22 69;
+      /* Dark mode — warm deep brown/charcoal palette */
+      --color-page: 18 15 12;          /* #12100C deep warm brown */
+      --color-large: 245 240 232;      /* #F5F0E8 parchment on dark */
+      --color-medium: 30 26 22;        /* #1E1A16 medium warm dark */
+      --color-primary: 26 22 18;       /* #1A1612 dark warm nav */
+      --color-secondary: 45 38 30;     /* #2D261E warm dark border */
+      --color-tertiary: 35 30 24;      /* #231E18 warm card dark */
+      --color-character: 225 215 200;  /* #E1D7C8 warm off-white text */
+      --color-ambient: 120 95 62;      /* #785F3E muted gold dark */
     }
   }
 }
 
 @layer components{
   .card-box {
-    @apply p-4 bg-tertiary rounded-xl shadow-lg flex items-center space-x-4;
-  }  
+    @apply p-4 bg-tertiary flex items-center space-x-4 border border-secondary;
+  }
+
+  .navbar-header {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.7rem;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: opacity 0.2s ease;
+  }
+
+  .navbar-active {
+    @apply text-character;
+    opacity: 1;
+    border-bottom: 1px solid rgb(var(--color-character));
+    padding-bottom: 2px;
+  }
+
+  .navbar-inactive {
+    @apply text-character;
+    opacity: 0.5;
+  }
+
+  .navbar-inactive:hover {
+    opacity: 0.85;
+  }
 }
 
 
 @layer utilities {
   .animation-fade-in {
     opacity: 0;
-    animation: fade-in 0.35s ease-in forwards;
+    animation: fade-in 0.5s ease-out forwards;
   }
   
   @keyframes fade-in {
@@ -65,14 +107,14 @@
     }
 
     0% {
-      transform: translateY(5%);
+      transform: translateY(8px);
       opacity: 0;
     }
   }
 
   .animation-fade-in-down{
     opacity: 0;
-    animation: fade-in-down 0.35s ease-in forwards;
+    animation: fade-in-down 0.4s ease-out forwards;
   }
 
   @keyframes fade-in-down {
@@ -82,13 +124,13 @@
     }
 
     0% {
-      transform: translateY(-20%);
+      transform: translateY(-16px);
       opacity: 0;
     }
 
   }
 
   .page-column {
-    @apply mx-auto md:max-w-md max-w-xs space-y-12 mt-36 pb-28;
+    @apply mx-auto md:max-w-lg max-w-xs space-y-14 mt-32 pb-28;
   }
 }

@@ -16,7 +16,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "tailwindcss": "^3.1.7",
-    "use-local-storage":"3.0.0",
+    "use-local-storage": "^3.0.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -26,7 +26,6 @@
     "eject": "react-scripts eject",
     "dev": "npx tailwindcss -i ./src/index.css -o ./build/tailwind.css --watch",
     "minify": "cross-env NODE_ENV=production postcss ./src/index.css -o ./build/tailwind.css --minify"
-
   },
   "eslintConfig": {
     "extends": [
