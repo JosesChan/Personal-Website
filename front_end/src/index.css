@@ -5,25 +5,27 @@
 
 @layer base{
   html {
-    font-family: 'Jost', system-ui, sans-serif;
+    font-family: 'Barlow', system-ui, sans-serif;
   }
 
   h1 {
-    @apply font-serif font-light tracking-widest uppercase text-character;
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-    letter-spacing: 0.2em;
+    @apply font-serif uppercase text-character;
+    font-size: clamp(2rem, 6vw, 4rem);
+    letter-spacing: 0.08em;
+    line-height: 1;
   }
 
   h2 {
-    @apply font-serif font-light text-character;
-    font-size: clamp(1.25rem, 3vw, 2rem);
+    @apply font-serif uppercase text-character;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
     letter-spacing: 0.06em;
+    line-height: 1.05;
   }
 
   h3 {
-    @apply font-sans font-normal tracking-wider uppercase text-character;
-    font-size: 0.75rem;
-    letter-spacing: 0.15em;
+    @apply font-sans font-medium uppercase text-character;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
   }
 
   p {
@@ -36,28 +38,27 @@
   }
 
   :root {
-    /* Light mode — warm cream/parchment palette */
-    --color-page: 245 240 232;         /* #F5F0E8 warm parchment */
-    --color-large: 28 25 23;           /* #1C1917 warm near-black */
-    --color-medium: 40 36 32;          /* #282420 dark warm brown */
-    --color-primary: 253 251 247;      /* #FDFBF7 off-white */
-    --color-secondary: 225 217 205;    /* #E1D9CD warm light sand */
-    --color-tertiary: 237 232 222;     /* #EDE8DE warm sand card */
-    --color-character: 28 25 23;       /* #1C1917 warm near-black text */
-    --color-ambient: 196 168 130;      /* #C4A882 warm gold accent */
+    /* Red-and-black aggressive palette */
+    --color-page: 8 8 8;               /* #080808 near-black */
+    --color-large: 0 0 0;              /* #000000 pure black */
+    --color-medium: 14 14 14;          /* #0E0E0E dark panel */
+    --color-primary: 0 0 0;            /* #000000 black nav */
+    --color-secondary: 55 5 5;         /* #370505 dark red border */
+    --color-tertiary: 18 18 18;        /* #121212 card background */
+    --color-character: 220 215 210;    /* #DCD7D2 off-white text */
+    --color-ambient: 200 0 0;          /* #C80000 crimson accent */
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      /* Dark mode — warm deep brown/charcoal palette */
-      --color-page: 18 15 12;          /* #12100C deep warm brown */
-      --color-large: 245 240 232;      /* #F5F0E8 parchment on dark */
-      --color-medium: 30 26 22;        /* #1E1A16 medium warm dark */
-      --color-primary: 26 22 18;       /* #1A1612 dark warm nav */
-      --color-secondary: 45 38 30;     /* #2D261E warm dark border */
-      --color-tertiary: 35 30 24;      /* #231E18 warm card dark */
-      --color-character: 225 215 200;  /* #E1D7C8 warm off-white text */
-      --color-ambient: 120 95 62;      /* #785F3E muted gold dark */
+      --color-page: 8 8 8;
+      --color-large: 0 0 0;
+      --color-medium: 14 14 14;
+      --color-primary: 0 0 0;
+      --color-secondary: 55 5 5;
+      --color-tertiary: 18 18 18;
+      --color-character: 220 215 210;
+      --color-ambient: 200 0 0;
     }
   }
 }
@@ -68,28 +69,28 @@
   }
 
   .navbar-header {
-    font-family: 'Jost', sans-serif;
-    font-size: 0.7rem;
-    font-weight: 400;
-    letter-spacing: 0.18em;
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
     text-transform: uppercase;
-    transition: opacity 0.2s ease;
+    transition: color 0.2s ease;
   }
 
   .navbar-active {
-    @apply text-character;
-    opacity: 1;
-    border-bottom: 1px solid rgb(var(--color-character));
+    color: rgb(var(--color-ambient));
+    border-bottom: 2px solid rgb(var(--color-ambient));
     padding-bottom: 2px;
   }
 
   .navbar-inactive {
     @apply text-character;
-    opacity: 0.5;
+    opacity: 0.45;
   }
 
   .navbar-inactive:hover {
-    opacity: 0.85;
+    color: rgb(var(--color-ambient));
+    opacity: 1;
   }
 }
 
@@ -97,7 +98,7 @@
 @layer utilities {
   .animation-fade-in {
     opacity: 0;
-    animation: fade-in 0.5s ease-out forwards;
+    animation: fade-in 0.4s ease-out forwards;
   }
   
   @keyframes fade-in {
@@ -114,7 +115,7 @@
 
   .animation-fade-in-down{
     opacity: 0;
-    animation: fade-in-down 0.4s ease-out forwards;
+    animation: fade-in-down 0.35s ease-out forwards;
   }
 
   @keyframes fade-in-down {

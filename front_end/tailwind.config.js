@@ -20,8 +20,8 @@ module.exports = {
         
       },
       fontFamily: {
-        serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
-        sans: ['Jost', 'system-ui', 'sans-serif'],
+        serif: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+        sans: ['Barlow', 'system-ui', 'sans-serif'],
       },
       letterSpacing: {
         widest: '0.2em',

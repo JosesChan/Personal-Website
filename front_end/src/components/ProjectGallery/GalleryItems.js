@@ -15,7 +15,7 @@ function GalleryItems({data, animationStatus, endAnimation}){
                             <img className="object-cover w-full h-auto" src={value.image} alt=""/>
                             <div className="space-y-2">
                                 <h3>
-                                    <a className="font-sans text-xs tracking-widest uppercase text-character hover:opacity-70 transition-opacity duration-300 underline underline-offset-4" href={value.URL} target="_blank" rel="noopener noreferrer">
+                                    <a className="font-sans text-xs tracking-widest uppercase text-character transition-colors duration-300 underline underline-offset-4" style={{color:'rgb(200 0 0)'}} href={value.URL} target="_blank" rel="noopener noreferrer">
                                         {value.title}
                                     </a>                                    
                                 </h3>                            

@@ -21,7 +21,7 @@ const NavMenu = () => {
 
         {/* Nav Image/Logo*/}
         <a href="https://www.linkedin.com/in/fong-sun-joses-chan-b693667b/" className="flex items-center order-1" target="_blank" rel="noopener noreferrer">
-          <span className="self-center font-serif font-light tracking-widest uppercase whitespace-nowrap text-character" style={{fontSize:'1.05rem', letterSpacing:'0.25em'}}>Joses Chan</span>
+          <span className="self-center font-serif uppercase whitespace-nowrap" style={{fontSize:'1.3rem', letterSpacing:'0.15em', color:'rgb(200 0 0)'}}>Joses Chan</span>
         </a>
 
         {/* Mobile button */}
