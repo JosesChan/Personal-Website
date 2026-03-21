@@ -8,12 +8,14 @@ import ContactContent from './pages/ContactPage';
 import RecordList from './components/RecordList';
 import Edit from "./components/edit";
 import Create from "./components/create";
+import ShootingStars from './components/ShootingStars';
 import React, {Fragment} from "react";
 
 
 function App() {
   return (
-    <Fragment>  
+    <Fragment>
+        <ShootingStars />
         <NavMenu />
           {/* <div className="absolute inset-0 -z-10 w-full px-5 py-24 bg-radial-gradient-top"> */}
             <Routes>
