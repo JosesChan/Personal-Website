@@ -2,7 +2,7 @@
 const CardGeneral = (props) => {
     return(
         <div className={props.className ? "p-7 bg-tertiary border border-secondary border-l-2 flex items-start space-x-4 " + props.className : "p-7 bg-tertiary border border-secondary border-l-2 flex items-start space-x-4"}
-             style={{borderLeftColor: 'rgb(200 0 0)'}}>
+             style={{borderLeftColor: 'rgb(var(--color-ambient))'}}>
             <div className={props.subClassName ? props.subClassName + " w-full" : "w-full"}>
                 {props.children}
             </div>

@@ -34,7 +34,7 @@ function Tags({dataJSON, selectData}){
                             "mx-2 mb-3 px-4 py-1.5 font-sans text-xs tracking-widest uppercase transition-all duration-300" 
                             : 
                             "mx-2 mb-3 px-4 py-1.5 text-character border border-secondary font-sans text-xs tracking-widest uppercase opacity-40 hover:opacity-80 hover:border-red-700 transition-all duration-300"}
-                        style={tags === activeTag ? {color:'rgb(200 0 0)', borderWidth:'1px', borderStyle:'solid', borderColor:'rgb(200 0 0)'} : {}}
+                        style={tags === activeTag ? {color:'rgb(var(--color-ambient))', borderWidth:'1px', borderStyle:'solid', borderColor:'rgb(var(--color-ambient))'} : {}}
                         onClick={()=> {filterTags(tags); setTagState(tags);}} 
                         key={index}>
                         {tags} 

@@ -134,4 +134,31 @@
   .page-column {
     @apply mx-auto md:max-w-lg max-w-xs space-y-14 mt-32 pb-28;
   }
+
+  /* Fire particle animation */
+  .fire-particle {
+    position: absolute;
+    bottom: -20px;
+    animation: ember-rise linear infinite;
+    filter: blur(1.5px);
+  }
+
+  @keyframes ember-rise {
+    0% {
+      transform: translateY(0) translateX(0) scale(1);
+      opacity: var(--start-opacity, 0.6);
+    }
+    30% {
+      transform: translateY(-30vh) translateX(10px) scale(0.85);
+      opacity: calc(var(--start-opacity, 0.6) * 0.85);
+    }
+    60% {
+      transform: translateY(-60vh) translateX(-14px) scale(0.6);
+      opacity: calc(var(--start-opacity, 0.6) * 0.5);
+    }
+    100% {
+      transform: translateY(-105vh) translateX(6px) scale(0.2);
+      opacity: 0;
+    }
+  }
 }
