@@ -5,21 +5,21 @@ function GalleryItems({data, animationStatus, endAnimation}){
     const style = (animationStatus?'animation-fade-in space-y-4 ':null);
 
     return (
-        <ul className="space-y-16 box-border">
+        <ul className="space-y-12 box-border w-full">
         {
             data.map((value)=>{
                 return (
 
                     <li className={style} onAnimationEnd={endAnimation} key={value.id}>     
-                        <CardGeneral subClassName="space-y-4"> 
-                            <img className="object-scale-down h-auto mx-auto max-w-full rounded-lg md:max-w-screen-sm md:max-h-screen-sm sm:max-w-screen-xs sm:max-h-screen-xs" src={value.image} alt=""/>
-                            <div>
+                        <CardGeneral subClassName="space-y-5"> 
+                            <img className="object-cover w-full h-auto" src={value.image} alt=""/>
+                            <div className="space-y-2">
                                 <h3>
-                                    <a className="text-blue-500 underline font-medium text-lg" href={value.URL} target="_blank" rel="noopener noreferrer">
+                                    <a className="font-sans text-xs tracking-widest uppercase transition-colors duration-300 underline underline-offset-4" style={{color:'rgb(var(--color-ambient))'}} href={value.URL} target="_blank" rel="noopener noreferrer">
                                         {value.title}
                                     </a>                                    
                                 </h3>                            
-                                <p>{value.description}</p>
+                                <p className="font-sans font-light text-sm leading-relaxed opacity-80">{value.description}</p>
                             </div>
                         </CardGeneral>
                     </li>

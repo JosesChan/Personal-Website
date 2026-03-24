@@ -4,58 +4,101 @@
 
 
 @layer base{
+  html {
+    font-family: 'Barlow', system-ui, sans-serif;
+  }
+
   h1 {
-    @apply text-xl font-medium text-character;
+    @apply font-serif uppercase text-character;
+    font-size: clamp(2rem, 6vw, 4rem);
+    letter-spacing: 0.08em;
+    line-height: 1;
   }
 
   h2 {
-    @apply text-xl font-medium text-character;
+    @apply font-serif uppercase text-character;
+    font-size: clamp(1.5rem, 4vw, 2.8rem);
+    letter-spacing: 0.06em;
+    line-height: 1.05;
   }
 
-  h3{
-    @apply text-base font-semibold text-character;
+  h3 {
+    @apply font-sans font-medium uppercase text-character;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
   }
 
   p {
-    @apply text-base text-character;
+    @apply font-sans font-light text-character leading-relaxed;
+    font-size: 0.9375rem;
+  }
+
+  a {
+    @apply text-character;
   }
 
   :root {
-    --color-page: 230 230 230;
-    --color-large: 14 19 24;
-    --color-medium: 13 19 23;
-    --color-primary: 240 250 250;
-    --color-secondary: 215 215 215;
-    --color-tertiary: 220 248 250;
-    --color-character: 0 0 0;
-    --color-ambient: 82 227 162;
+    /* Red-and-black aggressive palette */
+    --color-page: 8 8 8;               /* #080808 near-black */
+    --color-large: 0 0 0;              /* #000000 pure black */
+    --color-medium: 14 14 14;          /* #0E0E0E dark panel */
+    --color-primary: 0 0 0;            /* #000000 black nav */
+    --color-secondary: 55 5 5;         /* #370505 dark red border */
+    --color-tertiary: 18 18 18;        /* #121212 card background */
+    --color-character: 220 215 210;    /* #DCD7D2 off-white text */
+    --color-ambient: 200 0 0;          /* #C80000 crimson accent */
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --color-page: 9 10 15;
-      --color-large: 15 23 42;
-      --color-medium: 13 19 23;
-      --color-primary: 17 24 39;
-      --color-secondary: 44 58 74;
-      --color-tertiary: 35 38 46;
-      --color-character: 180 180 180;
-      --color-ambient: 36 22 69;
+      --color-page: 8 8 8;
+      --color-large: 0 0 0;
+      --color-medium: 14 14 14;
+      --color-primary: 0 0 0;
+      --color-secondary: 55 5 5;
+      --color-tertiary: 18 18 18;
+      --color-character: 220 215 210;
+      --color-ambient: 200 0 0;
     }
   }
 }
 
 @layer components{
   .card-box {
-    @apply p-4 bg-tertiary rounded-xl shadow-lg flex items-center space-x-4;
-  }  
+    @apply p-4 bg-tertiary flex items-center space-x-4 border border-secondary;
+  }
+
+  .navbar-header {
+    font-family: 'Barlow', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    transition: color 0.2s ease;
+  }
+
+  .navbar-active {
+    color: rgb(var(--color-ambient));
+    border-bottom: 2px solid rgb(var(--color-ambient));
+    padding-bottom: 2px;
+  }
+
+  .navbar-inactive {
+    @apply text-character;
+    opacity: 0.45;
+  }
+
+  .navbar-inactive:hover {
+    color: rgb(var(--color-ambient));
+    opacity: 1;
+  }
 }
 
 
 @layer utilities {
   .animation-fade-in {
     opacity: 0;
-    animation: fade-in 0.35s ease-in forwards;
+    animation: fade-in 0.4s ease-out forwards;
   }
   
   @keyframes fade-in {
@@ -65,14 +108,14 @@
     }
 
     0% {
-      transform: translateY(5%);
+      transform: translateY(8px);
       opacity: 0;
     }
   }
 
   .animation-fade-in-down{
     opacity: 0;
-    animation: fade-in-down 0.35s ease-in forwards;
+    animation: fade-in-down 0.35s ease-out forwards;
   }
 
   @keyframes fade-in-down {
@@ -82,13 +125,40 @@
     }
 
     0% {
-      transform: translateY(-20%);
+      transform: translateY(-16px);
       opacity: 0;
     }
 
   }
 
   .page-column {
-    @apply mx-auto md:max-w-md max-w-xs space-y-12 mt-36 pb-28;
+    @apply mx-auto md:max-w-lg max-w-xs space-y-14 mt-32 pb-28;
+  }
+
+  /* Fire particle animation */
+  .fire-particle {
+    position: absolute;
+    bottom: -20px;
+    animation: ember-rise linear infinite;
+    filter: blur(1.5px);
+  }
+
+  @keyframes ember-rise {
+    0% {
+      transform: translateY(0) translateX(0) scale(1);
+      opacity: var(--start-opacity, 0.6);
+    }
+    30% {
+      transform: translateY(-30vh) translateX(10px) scale(0.85);
+      opacity: calc(var(--start-opacity, 0.6) * 0.85);
+    }
+    60% {
+      transform: translateY(-60vh) translateX(-14px) scale(0.6);
+      opacity: calc(var(--start-opacity, 0.6) * 0.5);
+    }
+    100% {
+      transform: translateY(-105vh) translateX(6px) scale(0.2);
+      opacity: 0;
+    }
   }
 }
