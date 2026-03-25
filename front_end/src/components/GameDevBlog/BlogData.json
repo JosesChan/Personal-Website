@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Starting My Game Development Journey",
+        "date": "2024-01-10",
+        "summary": "An introduction to my game development journey, covering my initial motivations, the tools I chose, and the first steps I took to turn a lifelong interest into a real project.",
+        "tags": ["Unity", "General"],
+        "URL": ""
+    },
+    {
+        "id": 2,
+        "title": "Learning Object-Oriented Design Patterns in Unity",
+        "date": "2024-02-05",
+        "summary": "A deep dive into how I applied classic OOP design patterns such as Abstract Factory and Mediator inside Unity to keep my codebase maintainable and loosely coupled following SOLID principles.",
+        "tags": ["Unity", "C#", "Design Patterns"],
+        "URL": ""
+    },
+    {
+        "id": 3,
+        "title": "3D Modelling Swords and Props in Blender",
+        "date": "2024-03-12",
+        "summary": "An overview of my experience sculpting and modelling game-ready assets like swords and aircraft in Blender, including tips on topology, UV unwrapping, and exporting to Unity.",
+        "tags": ["Blender", "3D Art"],
+        "URL": ""
+    },
+    {
+        "id": 4,
+        "title": "Building a 2D Real-Time Strategy Game: First Prototype",
+        "date": "2024-04-20",
+        "summary": "Progress update on the story-driven 2D RTS game I am developing with a partner. This post covers our initial prototype decisions, the camera system, and early unit movement.",
+        "tags": ["Unity", "C#", "RTS"],
+        "URL": ""
+    },
+    {
+        "id": 5,
+        "title": "Animating Characters for Games with Blender",
+        "date": "2024-05-18",
+        "summary": "Notes from my experience creating amateur character animations in Blender — rigging, weight painting, and exporting animation clips to Unity's Animator controller.",
+        "tags": ["Blender", "Animation"],
+        "URL": ""
+    },
+    {
+        "id": 6,
+        "title": "Exploring Godot as an Alternative Engine",
+        "date": "2024-06-30",
+        "summary": "After spending time in Unity I decided to try Godot 4. This post compares the two engines from the perspective of a hobbyist developer, covering GDScript, the scene system, and editor workflow.",
+        "tags": ["Godot", "General"],
+        "URL": ""
+    }
+]

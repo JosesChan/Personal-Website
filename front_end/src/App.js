@@ -5,7 +5,8 @@ import AboutContent from './pages/AboutPage';
 import ProjectsContent from './pages/ProjectPage';
 import HobbiesContent from './pages/HobbiesPage';
 import ContactContent from './pages/ContactPage';
-import RecordList from './components/RecordList';
+import GameDevBlogContent from './pages/GameDevBlogPage';
+import RecordList from './components/recordList';
 import Edit from "./components/edit";
 import Create from "./components/create";
 import React, {Fragment} from "react";
@@ -21,6 +22,7 @@ function App() {
               <Route path='/about' element={<AboutContent />} />
               <Route path='/Projects' element={<ProjectsContent />} />
               <Route path='/Hobbies' element={<HobbiesContent />} />
+              <Route path='/GameDevBlog' element={<GameDevBlogContent />} />
               <Route path='/Contact' element={<ContactContent />} />
               <Route path='/Records' element={<RecordList/>} />
               <Route path="/edit/:id" element={<Edit />} />
