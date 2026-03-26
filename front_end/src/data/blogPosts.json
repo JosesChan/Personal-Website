@@ -1,0 +1,64 @@
+[
+  {
+    "id": 1,
+    "title": "Getting Started with Unity: First Steps",
+    "date": "2024-02-10",
+    "tags": ["Unity", "C#", "Beginner"],
+    "summary": "My first experience opening Unity after years of curiosity — setting up a project, understanding the editor layout, and writing my first MonoBehaviour script.",
+    "content": [
+      { "type": "paragraph", "text": "After years of being curious about game development I finally sat down and committed to learning Unity. The first hurdle was simply understanding the editor. The Scene view, Game view, Hierarchy, Inspector, and Project panels all competing for attention at once can feel overwhelming." },
+      { "type": "heading", "text": "Setting Up the Project" },
+      { "type": "paragraph", "text": "I started with a blank 2D project using the Universal Render Pipeline (URP) template. URP gives you a modern rendering pipeline with better performance characteristics than the legacy built-in pipeline, which is important if you plan to target mobile or lower-end hardware down the line." },
+      { "type": "heading", "text": "Writing the First MonoBehaviour" },
+      { "type": "paragraph", "text": "Unity's entry point for gameplay code is the MonoBehaviour class. My first script simply moved a sprite left and right based on keyboard input using Input.GetAxis. Seeing a character actually respond to input for the first time — even just sliding across the screen — was a surprisingly motivating moment." },
+      { "type": "paragraph", "text": "One key lesson early on: the difference between Update (called every frame) and FixedUpdate (called on a fixed physics timestep). Applying physics forces in Update can lead to unpredictable behaviour depending on frame rate, so physics interactions belong in FixedUpdate." }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Applying SOLID Principles in Unity",
+    "date": "2024-03-05",
+    "tags": ["Unity", "C#", "Architecture", "SOLID"],
+    "summary": "How I started applying SOLID design principles to my Unity code to reduce coupling and make the codebase easier to extend and test.",
+    "content": [
+      { "type": "paragraph", "text": "Early Unity tutorials encourage putting everything into a single God-object MonoBehaviour. This works for tiny demos but falls apart quickly as the project grows. I started studying SOLID principles and thinking about how they map onto Unity's component model." },
+      { "type": "heading", "text": "Single Responsibility" },
+      { "type": "paragraph", "text": "The single responsibility principle (SRP) says a class should have only one reason to change. In practice this meant splitting my PlayerController into separate components: PlayerMovement, PlayerAnimator, and PlayerHealth. Each script has a single clear job and can be modified independently." },
+      { "type": "heading", "text": "Dependency Inversion via ScriptableObjects" },
+      { "type": "paragraph", "text": "Unity's ScriptableObjects are a great tool for dependency inversion. Instead of a UI health bar reaching directly into the Player component, both the player and the health bar reference a shared HealthData ScriptableObject. The player writes to it; the UI reads from it. Neither knows about the other." },
+      { "type": "heading", "text": "Open/Closed with Abstract Classes" },
+      { "type": "paragraph", "text": "For enemy behaviour I created an abstract EnemyBase class with virtual methods for Patrol, Chase, and Attack. Concrete enemies override only the behaviours that differ. Adding a new enemy type means extending, not modifying, the existing hierarchy." }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Understanding the Abstract Factory Pattern in Game Development",
+    "date": "2024-04-18",
+    "tags": ["Unity", "C#", "Design Patterns", "Architecture"],
+    "summary": "A practical look at how I used the Abstract Factory pattern to manage spawning different families of enemies and pickups without coupling the spawner to concrete types.",
+    "content": [
+      { "type": "paragraph", "text": "Design patterns from the Gang of Four book can feel academic until you hit the exact problem they solve. The Abstract Factory pattern clicked for me when I needed to spawn themed waves of enemies — a forest biome with wolves and archers, a dungeon biome with skeletons and mages." },
+      { "type": "heading", "text": "The Problem" },
+      { "type": "paragraph", "text": "My original WaveSpawner had a growing switch statement checking which biome was active before instantiating the correct prefabs. Adding a new biome meant touching the spawner every time — a classic open/closed principle violation." },
+      { "type": "heading", "text": "The Factory Solution" },
+      { "type": "paragraph", "text": "I defined an IEnemyFactory interface with methods CreateGrunt(), CreateRanged(), and CreateElite(). Each biome implements IEnemyFactory and returns its own concrete prefab instances. The WaveSpawner holds a reference to IEnemyFactory and never needs to know which biome it is in." },
+      { "type": "paragraph", "text": "Switching biomes is now a matter of swapping the factory reference — often done through a ScriptableObject or a game state manager. The spawner code itself has not changed since the refactor." }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Building a 2D Real-Time Strategy Camera System",
+    "date": "2024-06-02",
+    "tags": ["Unity", "C#", "2D", "Camera", "RTS"],
+    "summary": "Notes on implementing a smooth RTS-style camera with edge scrolling, zoom, and boundaries for a 2D strategy game.",
+    "content": [
+      { "type": "paragraph", "text": "One of the first non-trivial systems I built for our 2D RTS project was the camera controller. RTS cameras need to feel responsive but not jarring, support zooming, and respect world boundaries so the player can't scroll into empty space." },
+      { "type": "heading", "text": "Panning with Edge Scrolling" },
+      { "type": "paragraph", "text": "Edge scrolling moves the camera when the mouse cursor is near the viewport edges. I check the mouse position in screen space each frame and apply a velocity proportional to how close the cursor is to each edge. Using Mathf.Lerp on the velocity gives a nice ease-in and ease-out feel rather than an abrupt start and stop." },
+      { "type": "heading", "text": "Zoom with Orthographic Size" },
+      { "type": "paragraph", "text": "For a 2D camera the zoom is controlled by Camera.orthographicSize. I clamp this between a minimum and maximum value and lerp towards the target size each frame. Combining scroll-wheel input with pinch-to-zoom (via Input.touchCount and the distance between two touch positions) gives both desktop and mobile support." },
+      { "type": "heading", "text": "World Boundaries" },
+      { "type": "paragraph", "text": "Boundaries are enforced by clamping the camera's world position within a rectangle that represents the playable area. I expose this rectangle as a serialized field so the designer can adjust it in the Inspector without touching code." }
+    ]
+  }
+]

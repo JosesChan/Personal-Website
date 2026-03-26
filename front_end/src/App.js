@@ -8,6 +8,8 @@ import ContactContent from './pages/ContactPage';
 import RecordList from './components/RecordList';
 import Edit from "./components/edit";
 import Create from "./components/create";
+import BlogContent from './pages/BlogPage';
+import BlogPostContent from './pages/BlogPostPage';
 import React, {Fragment} from "react";
 
 
@@ -25,6 +27,8 @@ function App() {
               <Route path='/Records' element={<RecordList/>} />
               <Route path="/edit/:id" element={<Edit />} />
               <Route path='/Create' element={<Create />} />
+              <Route path='/Blog' element={<BlogContent />} />
+              <Route path='/Blog/:id' element={<BlogPostContent />} />
             </Routes>
           {/* </div> */}
     </Fragment>
