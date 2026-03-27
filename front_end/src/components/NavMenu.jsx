@@ -1,6 +1,5 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import useLocalStorage from 'use-local-storage';
 
 const NavMenu = () => {
 
@@ -14,6 +13,9 @@ const NavMenu = () => {
   // const switchTheme = () => {
   //   setTheme(theme === 'light' ? 'dark' : 'light');
   // } 
+
+  const navLinkClass = ({isActive}) =>
+    `${isActive ? 'navbar-active' : 'navbar-inactive'} navbar-header`;
 
   return (
     <nav className="bg-primary lg:px-5 sm:px-4 py-3 fixed w-full z-20 top-0 left-0 border-b border-secondary">
@@ -45,28 +47,27 @@ const NavMenu = () => {
         <div className={`w-full self-center md:items-center md:w-auto md:order-2 order-last self-center md:block ${navbar ? "block animation-fade-in-down" : "hidden"}`}>
           <ul className={`flex md:flex-row flex-col w-full h-full md:pb-0 p-4 mt-4 mb-4 md:space-y-0 space-y-5 border border-secondary md:space-x-10 md:mt-0 md:text-sm md:font-normal md:border-0 text-character md:bg-primary bg-primary`}>
               
-              <CustomListLink to="/" className={({isActive}) => 
-              (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
+              <CustomListLink to="/" className={navLinkClass}>
                Home
               </CustomListLink>
               
-              <CustomListLink to="/About" className={({isActive}) => 
-              (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
+              <CustomListLink to="/About" className={navLinkClass}>
                 About
               </CustomListLink>
 
-              <CustomListLink to="/Hobbies" className={({isActive}) => 
-              (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
+              <CustomListLink to="/Hobbies" className={navLinkClass}>
                 Hobbies
               </CustomListLink>
+
+              <CustomListLink to="/Blog" className={navLinkClass}>
+                Blog
+              </CustomListLink>
               
-              <CustomListLink to="/Records" className={({isActive}) => 
-              (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
+              <CustomListLink to="/Records" className={navLinkClass}>
                 Record List
               </CustomListLink>
               
-              <CustomListLink to="/Create" className={({isActive}) => 
-              (isActive?'navbar-active' : 'navbar-inactive') + " " + "navbar-header"}>
+              <CustomListLink to="/Create" className={navLinkClass}>
                 Create Record
               </CustomListLink>
               
