@@ -3,6 +3,7 @@ import PictureStandalone from '../components/PictureStandalone';
 import selfPicture from '../imgs/IMG_02.jpg';
 import Gallery from '../components/ProjectGallery/Gallery';
 import CardGeneral from '../components/CardGeneral';
+import FireH3 from '../components/FireH3';
 
 
 const Home = () => {
@@ -19,9 +20,9 @@ const Home = () => {
 
             <CardGeneral>
                     <h2 className="mb-3">The Person</h2>
-                    <h3>
+                    <FireH3>
                       Developer who sews. A writer who solders. A bartender who fences. A gamer who hikes.
-                    </h3>
+                    </FireH3>
                     <br/>
                     <p> 
                       I've always loved stories, the way it could inspire people to be good and kind.
@@ -36,9 +37,9 @@ const Home = () => {
           
             <CardGeneral>
                     <h2 className="mb-3">The Purpose</h2>
-                    <h3>
+                    <FireH3>
                     Expression of style. Maturation of aesethetic. Exploration of ideas.  
-                    </h3>               
+                    </FireH3>               
                     <br/>
                     <p>
                       My goal is to continue maintaining this site alongside my primary project in game development.
