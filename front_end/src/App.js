@@ -5,12 +5,8 @@ import AboutContent from './pages/AboutPage';
 import ProjectsContent from './pages/ProjectPage';
 import HobbiesContent from './pages/HobbiesPage';
 import ContactContent from './pages/ContactPage';
-<<<<<<< Updated upstream
 import BlogContent from './pages/BlogPage';
-import RecordList from './components/recordList';
-=======
 import RecordList from './components/RecordList';
->>>>>>> Stashed changes
 import Edit from "./components/edit";
 import Create from "./components/create";
 import FireBackground from "./components/FireBackground";

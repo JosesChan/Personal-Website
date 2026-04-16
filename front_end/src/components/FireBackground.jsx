@@ -9,16 +9,16 @@ function seededRandom(seed) {
   };
 }
 
-const PARTICLE_COUNT = 40;
+const PARTICLE_COUNT = 62;
 
 const FireBackground = () => {
   const particles = useMemo(() => {
     const rand = seededRandom(42);
     return Array.from({ length: PARTICLE_COUNT }, (_, i) => {
       const left = rand() * 100;           // % across the viewport
-      const size = 3 + rand() * 10;        // px
+      const size = 4 + rand() * 4;        // px
       const duration = 3 + rand() * 5;     // seconds
-      const delay = rand() * 6;            // seconds
+      const delay = rand() * 14;            // seconds
       const hue = rand() > 0.6 ? 30 + rand() * 20 : 0; // mostly red, some orange
       const opacity = 0.3 + rand() * 0.55;
       return { id: i, left, size, duration, delay, hue, opacity };

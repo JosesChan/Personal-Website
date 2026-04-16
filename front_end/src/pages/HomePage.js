@@ -12,36 +12,50 @@ const Home = () => {
       <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
         <div className="page-column">
             <CardGeneral>
-                    <h2 className="mb-3">Hello, I'm Joses.</h2>
-                    <p>
-                        I am a graduate from the University of Lincoln and I like to make useful software projects.
-                    </p>                    
+                    <h2 className="mb-3">A space for my errant thoughts.</h2>         
             </CardGeneral>
           
-          <PictureStandalone location={selfPicture} altTag="Me standing in a field" />
+          {/*<PictureStandalone location={selfPicture} altTag="Me standing in a field" />*/}
 
             <CardGeneral>
-                    <h2 className="mb-3">Why does this website exist?</h2>
-                    <p>
-                      I made this website to both showcase my work and learn front end development skills, such as HTML, CSS and Javascript. 
-                      At the moment, it uses React, Node.js, Express, MongoDB and Tailwind CSS to create a responsive MERN website.
+                    <h2 className="mb-3">The Person</h2>
+                    <h3>
+                      Developer who sews. A writer who solders. A bartender who fences. A gamer who hikes.
+                    </h3>
+                    <br/>
+                    <p> 
+                      I've always loved stories, the way it could inspire people to be good and kind.
+                      I've led my life with the intent of being kind. Helping others is an expression of my values.
+                      However, I've learnt that you need more than just intent if you want to help people.
+                      
+
+                      And so learning is my foundation. I am and always will be a student. 
+
                     </p>
             </CardGeneral>
           
             <CardGeneral>
-                    <h2 className="mb-3">My projects.</h2>
+                    <h2 className="mb-3">The Purpose</h2>
+                    <h3>
+                    Expression of style. Maturation of aesethetic. Exploration of ideas.  
+                    </h3>               
+                    <br/>
                     <p>
-                      I love developing and creating software. Below are some of the projects I've worked on since attending and finishing university.
-                    </p>                    
+                      My goal is to continue maintaining this site alongside my primary project in game development.
+                      Creating a unified game identity and giving me a space to experiment with design and imagery.
+                    </p>
             </CardGeneral>
         </div>
       </div>
 
+
+      {/* Gallery Section 
       <div className="top-0 z-[-2] h-full w-full bg-page">
         <div className="justify-center items-center md:max-w-screen-md sm:max-w-xs flex container mx-auto pb-36 px-5">
           <Gallery/>
         </div>
       </div>
+      */}
 
     </Fragment>
   );
