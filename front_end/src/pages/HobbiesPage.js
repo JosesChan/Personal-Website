@@ -3,7 +3,6 @@ import { Fragment } from 'react';
 import PictureStandalone from '../components/PictureStandalone';
 import dndPicture from '../imgs/IMG_14.jpg'
 import swordPicture from '../imgs/IMG_1955.jpg';
-import FireH3 from '../components/FireH3';
 
 const HobbiesContent = () => {
     return (
@@ -26,7 +25,7 @@ const HobbiesContent = () => {
                         <h2>Historical European Martial Arts (HEMA)</h2>
                         <br/>
                         
-                        <FireH3>What is HEMA?</FireH3>
+                        <h3>What is HEMA?</h3>
                         <p>
                             Historical European Martial Arts reconstructs historical fighting styles through studying surviving fencing manuals and treatises. 
                             I joined the University of Lincoln HEMA society in 2019, and had a lot of fun not only sparring with my colleagues 
@@ -52,7 +51,7 @@ const HobbiesContent = () => {
                     <CardGeneral>
                         <h2>Videogames</h2>
 
-                        <FireH3>Early experiences</FireH3>                    
+                        <h3>Early experiences</h3>                    
                         <p>
                             I find videogames to be relaxing and interesting medium of entertainment. I was able to learn valuable lessons from videosgames growing up. 
                             MMORPG games like Runescape, taught me not only social skills to interact with people from different cultures, but also cyber safety practises 
@@ -60,7 +59,7 @@ const HobbiesContent = () => {
                         </p>
                         <br/>
                         
-                        <FireH3>Educational Teaching Tool</FireH3>     
+                        <h3>Educational Teaching Tool</h3>     
                         <p>
                             I was curious with what games could offer aside from just entertainment. During my ITGS IB Programme, I looked at
                             whether Digital Game Based Learning was beneficial as an additional learning tool. Inspired by similar studies and 
@@ -70,7 +69,7 @@ const HobbiesContent = () => {
                         </p>
                         <br/>
                         
-                        <FireH3>Game Development and 3D Modelling</FireH3>
+                        <h3>Game Development and 3D Modelling</h3>
                         <p>
                             My interests in videogames has always made me curious in making a game myself. 
                         </p>
@@ -98,7 +97,7 @@ const HobbiesContent = () => {
                     <CardGeneral>
                         <h2>Fiction and Fantasy</h2>
                         <br/>
-                        <FireH3>Fantasy Books</FireH3>
+                        <h3>Fantasy Books</h3>
                         <p>
                             I am an avid fan of fiction with my most recent read being Piranesi by Susanna Clarke. I love reading about the grim and gritty 
                             circumstances that characters, made by Joe Abercrombie, find themselves in, or vivid descriptions of space combat presented 
@@ -106,7 +105,7 @@ const HobbiesContent = () => {
                             reading tales of Euripdes, the fall of Troy and the Greek Pantheon. 
                         </p>
                         <br/>
-                        <FireH3>Dungeons and Dragons</FireH3>
+                        <h3>Dungeons and Dragons</h3>
                         <p>
                             Having been a participant in multiple DND games, I now host a weekly session with my friends. Having gone through many iterations 
                             of improvements, our current game now uses the virtual tabletop software Foundry. My players connect to my device set up to host 

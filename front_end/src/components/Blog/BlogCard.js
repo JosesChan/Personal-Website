@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import CardGeneral from '../CardGeneral';
-import FireH3 from '../FireH3';
 
 function BlogCard({ post }) {
     const [expanded, setExpanded] = useState(false);
@@ -18,11 +17,11 @@ function BlogCard({ post }) {
                             {post.readTime}
                         </span>
                     </div>
-                    <FireH3 style={{ color: 'rgb(var(--color-ambient))' }}>
+                    <h3 style={{ color: 'rgb(var(--color-ambient))' }}>
                         <span className="font-sans text-xs tracking-widest uppercase transition-colors duration-300">
                             {post.title}
                         </span>
-                    </FireH3>
+                    </h3>
                 </div>
 
                 {/* Tags */}

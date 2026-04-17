@@ -1,6 +1,5 @@
 import { Fragment } from 'react';
 import CardGeneral from '../components/CardGeneral';
-import FireH3 from '../components/FireH3';
 
 const AboutContent = () => {
     return (
@@ -36,7 +35,7 @@ const AboutContent = () => {
                     <br/>
                     <br/>
                     <h2 className="text-center md:text-3xl">"In every person, a universe"</h2>
-                    <FireH3 className="text-center md:text-2xl">- Elie Wiesel</FireH3>
+                    <h3 className="text-center md:text-2xl">- Elie Wiesel</h3>
                     <CardGeneral>
                         <h2>Learning and Reflection</h2>
                         <p>

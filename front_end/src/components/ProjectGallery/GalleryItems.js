@@ -1,5 +1,4 @@
 import CardGeneral from "../CardGeneral";
-import FireH3 from "../FireH3";
 
 function GalleryItems({data, animationStatus, endAnimation}){
     
@@ -15,11 +14,11 @@ function GalleryItems({data, animationStatus, endAnimation}){
                         <CardGeneral subClassName="space-y-5"> 
                             <img className="object-cover w-full h-auto" src={value.image} alt=""/>
                             <div className="space-y-2">
-                                <FireH3>
+                                <h3>
                                     <a className="font-sans text-xs tracking-widest uppercase transition-colors duration-300 underline underline-offset-4" style={{color:'rgb(var(--color-ambient))'}} href={value.URL} target="_blank" rel="noopener noreferrer">
                                         {value.title}
                                     </a>                                    
-                                </FireH3>                            
+                                </h3>                            
                                 <p className="font-sans font-light text-sm leading-relaxed opacity-80">{value.description}</p>
                             </div>
                         </CardGeneral>
