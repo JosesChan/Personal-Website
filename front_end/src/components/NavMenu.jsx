@@ -51,16 +51,19 @@ const NavMenu = () => {
                Home
               </CustomListLink>
               
+              {/*
               <CustomListLink to="/About" className={navLinkClass}>
                 About
               </CustomListLink>
 
+
               <CustomListLink to="/Hobbies" className={navLinkClass}>
                 Hobbies
               </CustomListLink>
+              */}
 
               <CustomListLink to="/Blog" className={navLinkClass}>
-                Blog
+                In Endings
               </CustomListLink>
               
             {/*

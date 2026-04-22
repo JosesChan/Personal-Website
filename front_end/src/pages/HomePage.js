@@ -20,18 +20,25 @@ const Home = () => {
             <CardGeneral>
                     <h2 className="mb-3">The Person</h2>
                     <h3>
-                      Developer who sews. A writer who solders. A bartender who fences. A gamer who hikes.
+                      A developer who sews. A writer who solders. A bartender who fences. A gamer who hikes.
                     </h3>
                     <br/>
-                    <p> 
-                      I've always loved stories, the way it could inspire people to be good and kind.
-                      I've led my life with the intent of being kind. Helping others is an expression of my values.
-                      However, I've learnt that you need more than just intent if you want to help people.
-                      
-
-                      And so learning is my foundation. I am and always will be a student. 
-
+                    <p>                       
+                      Driven by an inner desire to learn and explore, I've found myself lost and in love with the many facets of this world.
                     </p>
+                    <br/>                       
+                    <p>                         
+                      Whether it is an artist's expression of natural landscapes, mundane historical accounts on a time period or studies investigating autonomous vehicles on logistics, 
+                      I've always enjoyed understanding what different mediums present and the method in which they are shown.
+                    </p>
+                    <br/>
+                    <p>
+                      My dream is to one day create stories like the ones that inspired my youngerself to be kind and inquisitive in this vibrant world.
+                    </p>
+
+
+                    {/*Constantly chasing new skills and applying them to solve. Using my skills in soldering to fix electronics, webscraping to 
+                      notify product availability, and even just using my culinary skills to prepare original recipes for friends.*/}
             </CardGeneral>
           
             <CardGeneral>
@@ -41,8 +48,13 @@ const Home = () => {
                     </h3>               
                     <br/>
                     <p>
-                      My goal is to continue maintaining this site alongside my primary project in game development.
-                      Creating a unified game identity and giving me a space to experiment with design and imagery.
+                      Initially, I made this site to practise dockerised development of a responsive full stack application, but upon completion 
+                      I wanted to improve my UI/UX design and maintain the site as a general space to share my projects. 
+                    </p>
+                    <br/>
+                    <p>
+                      Through this site, I'll also be testing different aesethetics and visual designs that will eventually be used in my game.
+                      Alongside such experiments, I will also be recording stages of my game development project and other projects that I am interested in pursuing.
                     </p>
             </CardGeneral>
         </div>
