@@ -24,9 +24,9 @@
 
   h3 {
     @apply font-sans font-medium uppercase text-character;
-    font-size: 0.7rem;
+    font-size: 0.9rem;
+    font-weight: bold;
     letter-spacing: 0.2em;
-    animation: h3-ignite 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
   }
 
   p {
