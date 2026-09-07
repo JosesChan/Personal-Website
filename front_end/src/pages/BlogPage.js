@@ -11,9 +11,8 @@ const BlogPage = () => {
                     <CardGeneral>
                         <h2>Game Dev Blog</h2>
                         <p>
-                            A collection of posts documenting my game development journey — covering Unity architecture,
-                            Blender 3D modelling, design patterns, and the collaborative world-building behind the
-                            story-driven 2D real-time strategy game I'm building with a partner.
+                            A loose collection of posts documenting the game's development. Probably just updates on architecture within Unity,
+                            Blender 3D model updates, design patterns usage, or artwork for thegame.
                             Use the search bar or tags below to find topics that interest you.
                         </p>
                     </CardGeneral>

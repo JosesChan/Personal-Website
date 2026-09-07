@@ -1,11 +1,11 @@
 const blogData = [
     {
         id: 1,
-        title: "Starting My Game Development Journey in Unity",
+        title: "Starting Unity",
         date: "2024-01-10",
         summary: "An introduction to my game development adventure — why I chose Unity, what I hope to build, and the skills I'm bringing from software engineering.",
-        content: "After years of admiring games as a player and studying computer science, I finally committed to learning Unity seriously. My background in C# and object-oriented design gave me a head start, but game development introduces a whole new set of challenges: physics, rendering pipelines, input systems, and real-time performance constraints. In this post I document the first steps — setting up the project, understanding the scene hierarchy, and writing my first MonoBehaviour scripts. The biggest revelation was how Unity's component-based architecture encourages composition over inheritance, which aligns beautifully with SOLID principles I already follow.",
-        tags: ["Unity", "C#", "Beginner"],
+        content: "After years of admiring games as a player and as a programmer, I finally committed to building something serious with Unity. Coming from an object oriented programming background, I was already familiar with inheritance and design patterns, however coding state machines for animation was an exciting experience especially with all the asynchronous and realtime scripting involved. One of the most curveball changes was using composition over inheritance which took some time to get used yet makes perfect sense.",
+        tags: ["Unity", "OOP"],
         readTime: "4 min read",
     },
     {
