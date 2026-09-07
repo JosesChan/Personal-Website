@@ -97,6 +97,11 @@
 
 
 @layer utilities {
+  .bg-radial-gradient-top,
+  .bg-radial-gradient-bottom {
+    background-attachment: fixed;
+  }
+
   .animation-fade-in {
     opacity: 0;
     animation: fade-in 0.4s ease-out forwards;
