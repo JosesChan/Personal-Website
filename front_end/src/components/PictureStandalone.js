@@ -1,6 +1,6 @@
 function PictureStandalone(props){
     return (
-            <img className="mx-auto w-42 h-56 rounded-lg" src={props.location} alt={props.altTag}/>
+            <img className="w-full h-auto object-cover" src={props.location} alt={props.altTag}/>
     );
 };  
             

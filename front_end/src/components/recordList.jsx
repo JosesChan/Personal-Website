@@ -38,15 +38,18 @@ const Record = (props) => (
 
 // Using a GET method, retrieve all records in the database
 export default function RecordList() {
-  //
+
   const [records, setRecords] = useState([]);
+
 
   // This method fetches the records from the database.
   useEffect(() => {
 
     // create an asyrnchronous function in effect hook
-    async function getRecords() {
-      const response = await fetch(`http://localhost:5000/record/`);
+    async function getRecords() {    
+
+        // replace later, make a env variable instead of changing localhost to joseschan.com
+      const response = await fetch(`http://joseschan.com:5000/record/`);
 
       // If theres a problem, create an alert window with the error message
       if (!response.ok) {
@@ -69,7 +72,7 @@ export default function RecordList() {
   // This method will delete a record
   async function deleteRecord(id) {
     // wait until fetch promise has arisen
-    await fetch(`http://localhost:5000/${id}`, {
+    await fetch(`http://joseschan.com:5000/${id}`, {
       method: "DELETE"
     });
 
@@ -96,39 +99,41 @@ export default function RecordList() {
   return (
     <Fragment>
       <h1 className="invisible">Record Table</h1>
-        <div className="page-column">
-          <CardGeneral>
-            <h2 className="text-center">Website To-Do List / CRUD Example</h2>
-            <div className="grid grid-flow-col text-center p-3"> 
-              <table className="table-auto border border-gray-500">
-                <thead className="border-b">
-                  <tr>
-                    <th className="border border-gray-500 p-3">
-                      <h3>
-                        Task
-                      </h3>
-                    </th>
-                    <th className="hidden sm:table-cell border border-gray-500 p-3">
-                      <h3>
-                        Difficulty
-                      </h3>
-                    </th>
-                    <th className="hidden sm:table-cell border border-gray-500 p-3">
-                      <h3>
-                        Duration
-                      </h3>
-                    </th>
-                    <th className="border border-gray-500 p-3">
-                      <h3>
-                        Action
-                      </h3>
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>{recordList()}</tbody>
-              </table>
-            </div>
-          </CardGeneral>
+        <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
+          <div className="page-column">
+            <CardGeneral>
+              <h2 className="text-center">Website To-Do List / CRUD Example</h2>
+              <div className="grid grid-flow-col text-center p-3"> 
+                <table className="table-auto border border-gray-500">
+                  <thead className="border-b">
+                    <tr>
+                      <th className="border border-gray-500 p-3">
+                        <h3>
+                          Task
+                        </h3>
+                      </th>
+                      <th className="hidden sm:table-cell border border-gray-500 p-3">
+                        <h3>
+                          Difficulty
+                        </h3>
+                      </th>
+                      <th className="hidden sm:table-cell border border-gray-500 p-3">
+                        <h3>
+                          Duration
+                        </h3>
+                      </th>
+                      <th className="border border-gray-500 p-3">
+                        <h3>
+                          Action
+                        </h3>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>{recordList()}</tbody>
+                </table>
+              </div>
+            </CardGeneral>
+          </div>
         </div>
     </Fragment>
   );

@@ -3,7 +3,7 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
     "./public/index.html"
   ],
-  darkMode: "media", // or 'media' or 'class'
+  darkMode: ["selector","[data-theme*='dark']"], // or 'media' or 'class'
   theme: {
     extend: {
       colors:{
@@ -16,8 +16,21 @@ module.exports = {
         secondary: "rgb(var(--color-secondary) / <alpha-value>)",
         tertiary: "rgb(var(--color-tertiary) / <alpha-value>)",
         character: "rgb(var(--color-character) / <alpha-value>)",
+        ambient: "rgb(var(--color-ambient) / <alpha-value>)",
         
       },
+      fontFamily: {
+        serif: ['"Bebas Neue"', 'Impact', 'sans-serif'],
+        sans: ['Barlow', 'system-ui', 'sans-serif'],
+      },
+      letterSpacing: {
+        widest: '0.2em',
+        wider: '0.12em',
+      },
+    },
+    backgroundImage:{
+      'radial-gradient-top': 'radial-gradient(125% 125% at 50% 90%, rgba(var(--color-page)) 40%, rgba(var(--color-ambient)) 100%)',
+      'radial-gradient-bottom': 'radial-gradient(125% 125% at 50% 10%, rgba(var(--color-page)) 40%, rgba(var(--color-ambient)) 100%)',
     },
   },
   variants: {
