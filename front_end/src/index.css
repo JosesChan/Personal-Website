@@ -172,29 +172,31 @@
     }
   }
 
-  /* Fire particle animation */
-  .fire-particle {
+  .background-petal {
     position: absolute;
-    bottom: -20px;
-    animation: ember-rise linear infinite;
-    filter: blur(1.5px);
+    bottom: -14vh;
+    transform-origin: 50% 78%;
+    animation: petal-float linear infinite;
+    will-change: transform, opacity;
+    mix-blend-mode: screen;
+    filter: blur(0.15px);
   }
 
-  @keyframes ember-rise {
+  @keyframes petal-float {
     0% {
-      transform: translateY(0) translateX(0) scale(1);
+      transform: translate3d(0, 0, 0) rotate(var(--spin-start, 0deg)) scale(1);
       opacity: var(--start-opacity, 0.6);
     }
-    30% {
-      transform: translateY(-30vh) translateX(10px) scale(0.85);
-      opacity: calc(var(--start-opacity, 0.6) * 0.85);
+    35% {
+      transform: translate3d(var(--drift-a, 0vw), -34vh, 0) rotate(calc(var(--spin-start, 0deg) + 26deg)) scale(1.05);
+      opacity: calc(var(--start-opacity, 0.6) * 0.95);
     }
-    60% {
-      transform: translateY(-60vh) translateX(-14px) scale(0.6);
-      opacity: calc(var(--start-opacity, 0.6) * 0.5);
+    68% {
+      transform: translate3d(var(--drift-b, 0vw), -74vh, 0) rotate(calc(var(--spin-end, 0deg) - 18deg)) scale(0.78);
+      opacity: calc(var(--start-opacity, 0.6) * 0.58);
     }
     100% {
-      transform: translateY(-105vh) translateX(6px) scale(0.2);
+      transform: translate3d(calc(var(--drift-b, 0vw) * 0.45), -126vh, 0) rotate(var(--spin-end, 0deg)) scale(0.44);
       opacity: 0;
     }
   }
