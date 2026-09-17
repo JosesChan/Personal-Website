@@ -178,7 +178,6 @@
     transform-origin: 50% 78%;
     animation: petal-float linear infinite;
     will-change: transform, opacity;
-    mix-blend-mode: screen;
     filter: blur(0.15px);
   }
 
