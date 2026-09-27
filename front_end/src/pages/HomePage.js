@@ -109,6 +109,7 @@ const Home = () => {
 
         </div>
       </div>
+    </div>
 
 
       {/* Gallery Section 
