@@ -19,7 +19,7 @@ const Home = () => {
                     </p>
                     <br/>
                     <p>
-                      Helping others is one of life's greatest joys. I've always looked up to people who can be so charitable even in spite of difficult circumstances. 
+                      Helping others is one of life's greatest joys. I've always looked up to people who can be so freely charitable. 
                       Even if I can't be as wonderfully spirited as they, I can try to be as kind and helpful to those I meet. 
                       Supporting friends and helping strangers when I can.
                     </p>
@@ -81,18 +81,18 @@ const Home = () => {
                     <br/>       
                     <p>
                       As to how I got into perfumery, it was a chance encounter at the yearly bartender convention where I was given a sample of Jasmine perfume
-                      which is no longer produced. Reawakening memories of garlands made out of jasmine that is so often found in Thailand. I found it beautiful,
-                      and ponder endlessly on the idea of making perfumes. Until I read enough and experimented enough to make my own perfume distinct in character 
-                      and exactly what I love wearing. Now following IFRA 51 standards, I make perfumes for myself and for my friends to enjoy.
+                      which is no longer produced. Reawakening memories of jasmine garlands that are so often found when travelling in Thailand. I found it beautiful,
+                      and ponder endlessly on the idea of making perfumes. After some reading and a couple experiments, I now make perfume for me and my friends 
+                      that is wonderfully distinct and exactly what I love in a scent, which also follow IFRA 51 standards for safety.
                     </p>
 
                     <br/> 
                     <br/> 
                     <h3>Jewerly - Moons and Rings</h3>
                     <p>
-                      I find fashion to be a sort of armour against the world. A defining facade to show the world.
-                      I am also not incredibly bold or vibrant in my fashion. But what I find beautiful is what I want to portray.
-                      Whether its a deep connection to the moon and myths with pendants dedicated to a Greek combination of Diana and Artemis, or
+                      I find fashion to be a sort of armour against the world. A sort of facade to show the world.
+                      I am also not incredibly bold or exciting in my own fashion. But I find certain things beautiful and love to express it.
+                      Through pendants devoted to my connection with the moon and myths relating to Diana and Artemis, or
                       through rings that evoke nature and vivid florals. 
                     </p>
                     <br/>       
