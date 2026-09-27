@@ -3,6 +3,7 @@ import PictureStandalone from '../components/PictureStandalone';
 import selfPicture from '../imgs/IMG_02.jpg';
 import Gallery from '../components/ProjectGallery/Gallery';
 import CardGeneral from '../components/CardGeneral';
+import CardPicture from '../components/CardPicture';
 
 
 const Home = () => {
@@ -31,6 +32,7 @@ const Home = () => {
                       But the knowledge I value most, is often used and applied, making practical skills the most exciting to acquire.</p>         
             </CardGeneral>
 
+        <div className="page-column">
             <CardGeneral>
                     <h2 className="mb-3">Current Projects - A Whole Load of Blah</h2>
                     <h3>Stories and Game Development</h3>
