@@ -8,16 +8,16 @@ const HobbiesContent = () => {
     return (
         <Fragment>
             <h1 className="invisible">Hobbies Page</h1>
-            <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
+            <div className="page-background">
                 <div className="page-column">
                 <h2 className="text-center md:text-3xl">My Hobbies</h2>
 
                     <CardGeneral>
-                        <h2>Why I love learning</h2>
+                        <h2 className='hidden'>A life of learning</h2>
                         <p>
-                            I believe that its good to have a wide variety of interests. Aside from enjoyment, I am able 
-                            to learn various transferable skills, keeping myself both mentally and physically active. 
-                            Below are some of my hobbies that I love dedicating my time towards.
+                            I genuinely love learning, exploring the world in all of its aspects. 
+                            Whether it is through intellectual pursuits or phsyical activities, 
+                            I enjoy dedicating my time to learning something new.
                         </p>
                     </CardGeneral>
 

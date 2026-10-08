@@ -99,7 +99,7 @@ export default function RecordList() {
   return (
     <Fragment>
       <h1 className="invisible">Record Table</h1>
-        <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
+        <div className="page-background">
           <div className="page-column">
             <CardGeneral>
               <h2 className="text-center">Website To-Do List / CRUD Example</h2>

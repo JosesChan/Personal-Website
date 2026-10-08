@@ -5,7 +5,7 @@ const AboutContent = () => {
     return (
         <Fragment>
             <h1 className="invisible">About Page</h1>
-            <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
+            <div className="page-background">
                 <div  className="page-column">
                 <h2 className="text-center md:text-3xl">A little more about me!</h2>
                     <CardGeneral>

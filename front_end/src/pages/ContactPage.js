@@ -5,7 +5,7 @@ const ContactPage = () => {
     return (
         <Fragment>
             <h1 className="invisible">Contact Page</h1>
-            <div className="inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top">
+            <div className="page-background">
                 <div className="page-column">
                     <CardGeneral>
                         <h2>Contact me</h2>
