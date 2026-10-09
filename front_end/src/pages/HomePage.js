@@ -38,54 +38,55 @@ const Home = () => {
                     <h3>Stories and Game Development</h3>
                     <p>Games have always been a part of my life. Playing Runescape at the sage of six, I found friends, community, and the love for inventive puzzles and engaging 'questing'.</p>
                     <br/>            
-                    <p>Since then, I knew I wanted to make a game. At the age of sixteen, I started to learn 3D modelling via Blender, yet I wasn't ready to use all the tools to make a game yet.</p>
+                    <p>I knew I wanted to make a game. When I was sixteen, I started to learn 3D modelling via Blender, yet I couldn't conceptualise how to pull all these developmental tools to form a game</p>
                     <br/>            
-                    <p>It was only after studying Computer Science and experiencing deeply personal and emotionally captivating games, like Disco Elysium and Signalis, that I figured out what story I need to tell.</p>
+                    <p>It was only after studying Computer Science and experiencing narratively moving games, such as Disco Elysium and Signalis, that I committed to making a game.</p>
                     <br/>            
                     <p>
-                      The medium for my game is part tactical unit battle simulator, part continental logistics resource management. 
-                      Focusing less on realism, and pushing for more immersion to a tragic love story set in a hundred year war landscape.
+                      The game is a large scale unit battle simulator set in a pre-renaissance period during a war of the roses-esque environment.  
+                      Using the setting as the background for a tragic love/revenge story thats haunts me until I make it real.
                     </p>
                     <br/>            
                     <p>
-                      Two warring states are in a bitter struggle. Ideals and beliefs are in a bloody conflict. Mass violence is abound,
-                      with innocent people suffering at the behest of vengeful leaders and the lack of no easy resolution.
+                      In this world there are two warring states locked in an eternal struggle. 
+                      Mass violence is abound, with their political ideals in bloody conflict.
+                    </p>
+                    <p>
+                      Between a corrupt oligarchical republic and a fervent egalitarian-esque crusade.  
+                      Common people suffer, beneath the violence of armies or the grips of starvation.
                     </p> 
                     <br/>       
-                    <p>And yet two people find love.</p>
-                    <p>They form friendships.</p> 
-                    <p>There is hope. </p>      
+                    <p>And yet there is a girl, leading a mercenary band.</p>
+                    <p>She builds a family amongst her motley crew and finds love in another.</p> 
+                    <p>She inspires hope, and radiates kindness. </p>      
                     <br/>       
-                    <p>Then one dies. </p> 
-                    <p>The other is consumed by grief and driven to revenge. </p> 
-                    <p>Is there still hope? </p> 
+                    <p>Then she dies. Never achieving her dreams of peace, leaving her loved ones to handle the grief.</p> 
 
                     <br/>       
                     <br/>       
                     <h3>Cocktails, Cooking and Perfumery</h3>
                     <p>
-                      I find cooking deeply personal and very vulnerable when I cook for others. 
-                      I view food as a culture, when I cook it is a reflection of myself, of the environment I grew up in. 
-                      And so when I taste other cuisines, its an exciting experience to see how different ingredients are used and to what effect.
-                      Often cooking dishes again and again to capture accurately capture their flavours.
+                      I find cooking deeply personal especially when I cook for others. 
+                      I view food as a culture, when I cook it is a reflection of myself and the environment I grew up in. 
+                      And so when I taste other cuisines, its an exciting to see differences in flavour and ingredient usage.
+                      Which informs how I cook, always trying to accurately recreate the taste of childhood Thai and Hong Kong food, or 
+                      figuring out the way one should make foods like Feijoadas and Mole to not only taste correct but also reflect
+                      the regions it originates from.
                     </p>
                     <br/>       
                     <p>
-                      While in the cocktail scene that I have inadvertently found myself in, it is a similar experience.
-                      Oft times bartenders have recreated childhood dishes in a drink format. Using similar techniques such as sous vide infusions
-                      and fat washing to create whimsically fun and elegantly balanced cocktails.
-                    </p>
-                    <br/>       
-                    <p>
-                      In this rush of learning, I found myself driven more so to explore the culinary space, launching my skills from simple skills like making sauces
-                      and shaping Raviolli, to more niche activities like using nitrates to cure salami which is then hang dried in a minifridge.
+                      I have also inadvertently fell in love with cocktail making. Figuring out the flavour profiles of drinks from my childhood
+                      and replicating them has become one of my past times. While discovering new flavours through things like mezcal and categorising
+                      them also feeds into my enjoyment, always finding potential ingredients to add to my recipes. So far my favourites to make are a 
+                      milkwashed HK milk tea martini and a carbonated grapefruit orange tequila sunset.
                     </p>
                     <br/>       
                     <p>
                       As to how I got into perfumery, it was a chance encounter at the yearly bartender convention where I was given a sample of Jasmine perfume
-                      which is no longer produced. Reawakening memories of jasmine garlands that are so often found when travelling in Thailand. I found it beautiful,
-                      and ponder endlessly on the idea of making perfumes. After some reading and a couple experiments, I now make perfume for me and my friends 
-                      that is wonderfully distinct and exactly what I love in a scent, which also follow IFRA 51 standards for safety.
+                      which is no longer produced. Reawakening memories of jasmine garlands that are often found when travelling in Thailand. I found it beautiful,
+                      and ponder endlessly on the idea of making perfumes. After some reading and many experiments, I now make perfume for me and my friends 
+                      that is wonderfully distinct and exactly what I love in a scent. I'm currently working on developing Vanilla, Chocolate, Coffee and Rose based scents
+                      that follow IFRA 53 safety standards.
                     </p>
 
                     <br/> 
