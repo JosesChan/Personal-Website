@@ -58,18 +58,23 @@ const Home = () => {
                     <br/>       
                     <p>And yet there is a girl, leading a mercenary band.</p>
                     <p>She builds a family amongst her motley crew and finds love in another.</p> 
-                    <p>She inspires hope, and radiates kindness. </p>      
+                    <p>She inspires hope, and radiates warm kindness. </p>      
                     <br/>       
-                    <p>Then she dies. Never achieving her dreams of peace, leaving her loved ones to handle the grief.</p> 
+                    <p>Then she dies, never seeing her dreams of peace, her loved ones left to handle the grief.</p> 
 
                     <br/>       
                     <br/>       
                     <h3>Cocktails, Cooking and Perfumery</h3>
                     <p>
                       I find cooking deeply personal especially when I cook for others. 
-                      I view food as a culture, when I cook it is a reflection of myself and the environment I grew up in. 
-                      And so when I taste other cuisines, its an exciting to see differences in flavour and ingredient usage.
-                      Which informs how I cook, always trying to accurately recreate the taste of childhood Thai and Hong Kong food, or 
+                      Food is a part of culture, when I cook it is a reflection of myself and the environment I grew up in. 
+                      Which informs how I cook, always trying to accurately recreate the taste of childhood Thai/Hong Kong food.
+                      It is also equally influential when tasting food from other cultures. Not only is it exciting to see similar flavours
+                      when looking at Thai and Latin American food, but also how the same ingredients gets prepared and used. For example, 
+                      lime is prevalent in both cuisines, in Thailand its squeezed as a little garnish over Thai fried rice or used in cooking 
+                      to add a sour refreshing component to sauces such as in the spicy sour pork dish moo manao. While
+
+                       
                       figuring out the way one should make foods like Feijoadas and Mole to not only taste correct but also reflect
                       the regions it originates from.
                     </p>
