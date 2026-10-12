@@ -68,30 +68,25 @@ const Home = () => {
                     <p>
                       I find cooking deeply personal especially when I cook for others. 
                       Food is a part of culture, when I cook it is a reflection of myself and the environment I grew up in. 
-                      Which informs how I cook, always trying to accurately recreate the taste of childhood Thai/Hong Kong food.
-                      It is also equally influential when tasting food from other cultures. Not only is it exciting to see similar flavours
-                      when looking at Thai and Latin American food, but also how the same ingredients gets prepared and used. For example, 
-                      lime is prevalent in both cuisines, in Thailand its squeezed as a little garnish over Thai fried rice or used in cooking 
-                      to add a sour refreshing component to sauces such as in the spicy sour pork dish moo manao. While
-
-                       
-                      figuring out the way one should make foods like Feijoadas and Mole to not only taste correct but also reflect
-                      the regions it originates from.
+                      Which informs how I cook, always trying to precisely replicate flavours of childhood food from Thailand and Hong Kong.
+                      I love food from my home countries but I also love exploring culinarily. Learning to prepare and cure my own sausages or 
+                      trying to make new dishes like Cubanos, regional moles, Feijoadas, Dauphinoise.  
                     </p>
                     <br/>       
                     <p>
-                      I have also inadvertently fell in love with cocktail making. Figuring out the flavour profiles of drinks from my childhood
-                      and replicating them has become one of my past times. While discovering new flavours through things like mezcal and categorising
-                      them also feeds into my enjoyment, always finding potential ingredients to add to my recipes. So far my favourites to make are a 
-                      milkwashed HK milk tea martini and a carbonated grapefruit orange tequila sunset.
+                      I have also inadvertently fell in love with cocktail making. 
+                      Figuring out the flavour profiles of drinks from my childhood and replicating them has become one of my favourite past times. 
+                      While discovering new flavours through things like mezcal and categorising them also feeds into my enjoyment, 
+                      always finding potential ingredients to add to my recipes. So far my favourites to make are a 
+                      milkwashed HK milk tea martini and a carbonated grapefruit orange tequila sunset. 
                     </p>
                     <br/>       
                     <p>
                       As to how I got into perfumery, it was a chance encounter at the yearly bartender convention where I was given a sample of Jasmine perfume
                       which is no longer produced. Reawakening memories of jasmine garlands that are often found when travelling in Thailand. I found it beautiful,
-                      and ponder endlessly on the idea of making perfumes. After some reading and many experiments, I now make perfume for me and my friends 
-                      that is wonderfully distinct and exactly what I love in a scent. I'm currently working on developing Vanilla, Chocolate, Coffee and Rose based scents
-                      that follow IFRA 53 safety standards.
+                      and ponder endlessly on the idea of making perfumes. After some reading and many experiments, I can now make perfume that is wonderfully distinct 
+                      and exactly what I love in a scent. I'm currently working on developing Vanilla, Chocolate, Coffee and Rose based scents
+                      that follow IFRA 53 safety standards, and occassional gift them to friends.
                     </p>
 
                     <br/> 
