@@ -70,10 +70,10 @@
   }
 
   .navbar-header {
-    font-family: 'Barlow', sans-serif;
-    font-size: 0.65rem;
+    font-family: "Bebas Neue", 'Impact', sans-serif;
+    font-size: 1.2rem;
     font-weight: 500;
-    letter-spacing: 0.22em;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
     transition: color 0.2s ease;
   }
@@ -81,7 +81,7 @@
   .navbar-active {
     color: rgb(var(--color-ambient));
     border-bottom: 2px solid rgb(var(--color-ambient));
-    padding-bottom: 2px;
+    padding-bottom: 1px;
   }
 
   .navbar-inactive {
@@ -121,7 +121,7 @@
 
   .animation-bg-fade {
     opacity: 0;
-    animation: fade-in-bg 0.35s ease-in forwards;
+    animation: fade-in-bg 1s ease-out forwards;
   }
 
   @keyframes fade-in-bg {
@@ -131,34 +131,15 @@
     }
 
     0% {
-      transform: translateY(2%);
+      transform: translateY(0.15%);
       opacity: 0;
     }
-  }
-
-  .animation-fade-in-down{
-    opacity: 0;
-    animation: fade-in-down 0.35s ease-out forwards;
-  }
-
-  @keyframes fade-in-down {
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    0% {
-      transform: translateY(-16px);
-      opacity: 0;
-    }
-
   }
 
   .page-column {
     @apply mx-auto md:max-w-lg max-w-xs space-y-14 mt-32 pb-28;
   }
 
-<<<<<<< Updated upstream
   @keyframes h3-ignite {
     0% {
       opacity: 0;
@@ -216,10 +197,8 @@
       opacity: 0;
     }
   }
-}
-=======
+
   .page-background{
     @apply inset-0 -z-10 h-full w-full px-5 pt-12 bg-radial-gradient-top animation-bg-fade;
   }
 }
->>>>>>> Stashed changes

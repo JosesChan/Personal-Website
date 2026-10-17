@@ -15,17 +15,13 @@ const Home = () => {
             <CardGeneral>
                     <h2 className="mb-3">Kindness and Curiosity</h2>
                     <p>
-                      If I were to describe myself, I would say these are the two principles I cherish the most.
-                      Constantly trying to adhere to the tenets I set myself.
+                      If I were to describe myself, I would say these are the two principles I follow the most.
                     </p>
                     <br/>
                     <p>
-                      Helping others is one of life's greatest joys. I've always looked up to people who can be so freely charitable. 
-                      Even if I can't be as wonderfully spirited as they, I can try to be as kind and helpful to those I meet. 
-                      Supporting friends and helping strangers when I can.
-                    </p>
-                    <br/>
-                    <p>Another joy for me is learning. Being capable not only helps me solve problems for myself and others, but the act of exploring and discovery itself is invigorating.</p>
+                      I've always looked up to people who can be so freely charitable. Even if I can't be as wonderfully spirited as they, 
+                      I can try to be as kind and helpful to those I meet. Supporting friends and helping strangers when I can. As for learning, 
+                      I believe being capable not only helps me solve problems for myself and others, but the act of exploring and discovery itself is invigorating.</p>
                     <br/>                    
                     <p>
                       As a result I tend to read alot, through lived experiences people have documented or through stories and fictions that reflect people's idea of the world. 
@@ -36,20 +32,43 @@ const Home = () => {
             <CardGeneral>
                     <h2 className="mb-3">Current Projects - A Whole Load of Blah</h2>
                     <h3>Stories and Game Development</h3>
-                    <p>Games have always been a part of my life. Playing Runescape at the sage of six, I found friends, community, and the love for inventive puzzles and engaging 'questing'.</p>
-                    <br/>            
-                    <p>I knew I wanted to make a game. When I was sixteen, I started to learn 3D modelling via Blender, yet I couldn't conceptualise how to pull all these developmental tools to form a game</p>
-                    <br/>            
-                    <p>It was only after studying Computer Science and experiencing narratively moving games, such as Disco Elysium and Signalis, that I committed to making a game.</p>
+                    <br/>
+                    <p>Games have always been a part of my life. Playing Runescape at the age of six, I found friends, community, and the love for inventive puzzles and engaging 'questing'.</p>
                     <br/>            
                     <p>
-                      The game is a large scale unit battle simulator set in a pre-renaissance period during a war of the roses-esque environment.  
-                      Using the setting as the background for a tragic love/revenge story thats haunts me until I make it real.
+                      But I knew I wanted to make a game. There was this desire that always lulled me towards game development.
+                      Learning to model objects with embarassingly questionable topology in Blender, alongside secondary school classroom OOP lessons using Java. 
+                      Or sitting in game jams to hang around my game dev friends without the confidence to fully join in during my university years.
                     </p>
                     <br/>            
                     <p>
-                      In this world there are two warring states locked in an eternal struggle. 
-                      Mass violence is abound, with their political ideals in bloody conflict.
+                      
+                      Then I played through the wonderful and narratively rich game Disco Elysium. Falling in love with the ideas and storytelling presented by it.
+                      Blending an absurdist world with a confluence of clashing ideas, all experienced while trying to solve a murder mystery through the lense of someone going through problems
+                      that would make anyone empathise with. 
+                      
+                    </p>
+                    <br/>            
+                    <p>
+                      Then I played through Signalis. Heartbreakingly sad, industrial grunge, mixed with analog futurism. A beautiful mix of inspirations used
+                      to tell a story of love in a horrifying dystopian world. Connecting with me emotionally, seeing love persist through horrors of even supernaturally variety.
+
+                      </p>
+                    <br/>            
+                    <p>
+                      After these two games, I was determined to make my own, with a story from my own dreams that has haunted me since. Plaguing my days with thoughts of 
+                      its world, its characters and its presentation. Learning from friends how anatomy plays a roll into drawing to better my organic models, and pocketing 
+                      various people I've met to tap on later on for voice acting and sound design whenever I feel ready to present a more complete version of the world trapped within me.
+                    </p>
+                    <br/>            
+                    <br/>            
+                    <p>
+                      The game itself is a large scale army battle simulator, set in a time period between intertransitionary period between medieval and renaissance. 
+                      The atmosphere is of a wartorn Europe-esque environment, with generational struggle similar to the Hundred Years war.  
+                    </p>
+                    <br/>            
+                    <p>
+                      In the world, two warring states are locked in an endless struggle, where clashing ideals has led to mass violence.
                     </p>
                     <p>
                       Between a corrupt oligarchical republic and a fervent egalitarian-esque crusade.  

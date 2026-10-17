@@ -9,7 +9,7 @@ function seededRandom(seed) {
   };
 }
 
-const PARTICLE_COUNT = 62;
+const PARTICLE_COUNT = 162;
 
 const FireBackground = () => {
   const particles = useMemo(() => {

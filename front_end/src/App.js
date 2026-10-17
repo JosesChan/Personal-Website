@@ -6,7 +6,7 @@ import ProjectsContent from './pages/ProjectPage';
 import HobbiesContent from './pages/HobbiesPage';
 import ContactContent from './pages/ContactPage';
 import BlogContent from './pages/BlogPage';
-import RecordList from './components/RecordList';
+import RecordList from './components/recordList';
 import Edit from "./components/edit";
 import Create from "./components/create";
 import FireBackground from "./components/FireBackground";
