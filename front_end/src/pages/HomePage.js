@@ -42,7 +42,11 @@ const Home = () => {
                     </p>
                     <br/>            
                     <p>
-                      
+                      Having finished my degree, and falling in love with narratively moving games like Signalis and the incredible rich and dense world of Disco Elysium.
+                      I am committed to making my own game. After countless mind numbing attempts spent forming lumps of digital clay into a human, 
+                      numerous software projects with endless amounts of documentation to digest, and watching multiple games release missing some key element for success
+                      despite having so much potential for a fun and engaging game.
+
                       Then I played through the wonderful and narratively rich game Disco Elysium. Falling in love with the ideas and storytelling presented by it.
                       Blending an absurdist world with a confluence of clashing ideas, all experienced while trying to solve a murder mystery through the lense of someone going through problems
                       that would make anyone empathise with. 
